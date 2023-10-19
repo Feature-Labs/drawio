@@ -205,6 +205,12 @@ App.ERROR_UNKNOWN = 'unknown';
 App.MODE_GOOGLE = 'google';
 
 /**
+ * Superdrive App Mode
+ * @type {string}
+ */
+App.MODE_SUPERDRIVE = 'superdrive';
+
+/**
  * Dropbox mode
  */
 App.MODE_DROPBOX = 'dropbox';
@@ -248,12 +254,6 @@ App.MODE_EMBED = 'embed';
  * Atlas App Mode
  */
 App.MODE_ATLAS = 'atlas';
-
-/**
- * Superdrive App Mode
- * @type {string}
- */
-App.MODE_SUPERDRIVE = 'superdrive';
 
 /**
  * Sets the delay for autosave in milliseconds. Default is 2000.
@@ -487,6 +487,34 @@ App.getStoredMode = function()
 					{
 						// Disables loading of client
 						window.DriveClient = null;
+					}
+				}
+
+
+				if (typeof window.SuperDriveClient === 'function')
+				{
+					if (urlParams['sd'] != '0' && isSvgBrowser &&
+						(document.documentMode == null || document.documentMode >= 10))
+					{
+						// Immediately loads client
+						if (App.mode == App.MODE_SUPERDRIVE || (urlParams['state'] != null &&
+							window.location.hash == '') || (window.location.hash != null &&
+							window.location.hash.substring(0, 2) == '#S'))
+						{
+							// mxscript('https://apis.google.com/js/api.js');
+						}
+						// Keeps lazy loading for fallback to authenticated Google file if not public in loadFile
+						else if (urlParams['chrome'] == '0' && (window.location.hash == null ||
+							window.location.hash.substring(0, 45) !== '#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D'))
+						{
+							// Disables loading of client
+							window.SuperDriveClient = null;
+						}
+					}
+					else
+					{
+						// Disables loading of client
+						window.SuperDriveClient = null;
 					}
 				}
 	
@@ -1479,10 +1507,7 @@ App.prototype.initializeViewerMode = function()
 };
 
 /**
- * Translates this point by the given vector.
- * 
- * @param {number} dx X-coordinate of the translation.
- * @param {number} dy Y-coordinate of the translation.
+ * 初始化Drawio
  */
 App.prototype.init = function()
 {
@@ -1661,11 +1686,42 @@ App.prototype.init = function()
 			}
 			else if (window.DrawGapiClientCallback == null)
 			{
-				window.DrawGapiClientCallback = initDriveClient;
+				window.DrawOneDriveClientCallback = initOneDriveClient;
 			}
 		});
 		
 		initDriveClient();
+	}
+
+	// 初始化加载
+	if (urlParams['embed'] != '1' || urlParams['sd'] == '1')
+	{
+		var initSuperDriveClient = mxUtils.bind(this, function()
+		{
+
+			if (typeof SuperDrive !== 'undefined')
+			{
+				/**
+				 * Holds the x-coordinate of the point.
+				 */
+				this.superDrive = new SuperDriveClient(this);
+
+				this.superDrive.addListener('userChanged', mxUtils.bind(this, function()
+				{
+					this.updateUserElement();
+					this.restoreLibraries();
+				}));
+
+				// Notifies listeners of new client
+				this.fireEvent(new mxEventObject('clientLoaded', 'client', this.superDrive));
+			}
+			else if (window.DrawSuperDriveClientCallback == null)
+			{
+				window.DrawSuperDriveClientCallback = initOneDriveClient;
+			}
+		});
+
+		initSuperDriveClient();
 	}
 
 	if (urlParams['embed'] != '1' || urlParams['db'] == '1')
@@ -2685,6 +2741,10 @@ App.prototype.createBackground = function()
 			{
 				this.appIcon.setAttribute('title', mxResources.get('openIt', [mxResources.get('googleDrive')]));
 				this.appIcon.style.cursor = 'pointer';
+			} else if (mode == App.MODE_SUPERDRIVE)
+			{
+				this.appIcon.setAttribute('title', mxResources.get('openIt', [mxResources.get('superdrive')]));
+				this.appIcon.style.cursor = 'pointer';
 			}
 			else if (mode == App.MODE_DROPBOX)
 			{
@@ -2745,6 +2805,10 @@ App.prototype.appIconClicked = function(evt)
 	else if (mode == App.MODE_GOOGLE)
 	{
 		this.openLink('https://drive.google.com/?authuser=0');
+	}else if (mode == App.MODE_SUPERDRIVE)
+	{
+		// this.openLink('https://drive.google.com/?authuser=0');
+		// TODO 替换为自定义的登录链接
 	}
 	else if (mode == App.MODE_ONEDRIVE)
 	{
@@ -4114,10 +4178,11 @@ App.prototype.pickLibrary = function(mode)
 {
 	mode = (mode != null) ? mode : this.mode;
 	
-	if (mode == App.MODE_GOOGLE || mode == App.MODE_DROPBOX || mode == App.MODE_ONEDRIVE ||
+	if (mode == App.MODE_GOOGLE || mode == App.MODE_DROPBOX || mode == App.MODE_ONEDRIVE || mode == App.MODE_SUPERDRIVE ||
 		mode == App.MODE_GITHUB || mode == App.MODE_GITLAB || mode == App.MODE_TRELLO)
 	{
 		var peer = (mode == App.MODE_GOOGLE) ? this.drive :
+			((mode == App.MODE_SUPERDRIVE)) ? this.superDrive :
 			((mode == App.MODE_ONEDRIVE) ? this.oneDrive :
 			((mode == App.MODE_GITHUB) ? this.gitHub :
 			((mode == App.MODE_GITLAB) ? this.gitLab :

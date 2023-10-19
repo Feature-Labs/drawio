@@ -2,6 +2,7 @@ bin
 build
 .idea
 classes
+out
 node_modules
 .vscode/settings.json
 src/main/webapp/WEB-INF/lib/animal-sniffer-annotations-*.jar

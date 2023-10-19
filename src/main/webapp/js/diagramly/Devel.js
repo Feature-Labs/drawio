@@ -233,6 +233,7 @@ mxscript(drawDevUrl + 'js/diagramly/DrawioFileSync.js');
 //Comments
 mxscript(drawDevUrl + 'js/diagramly/DrawioComment.js');
 mxscript(drawDevUrl + 'js/diagramly/DriveComment.js');
+mxscript(drawDevUrl + 'js/diagramly/SuperDriveComment.js');
 
 // Excluded in base.min.js
 mxscript(drawDevUrl + 'js/diagramly/DrawioClient.js');
@@ -241,6 +242,9 @@ mxscript(drawDevUrl + 'js/diagramly/UrlLibrary.js');
 mxscript(drawDevUrl + 'js/diagramly/DriveFile.js');
 mxscript(drawDevUrl + 'js/diagramly/DriveLibrary.js');
 mxscript(drawDevUrl + 'js/diagramly/DriveClient.js');
+mxscript(drawDevUrl + 'js/diagramly/SuperDriveFile.js');
+mxscript(drawDevUrl + 'js/diagramly/SuperDriveLibrary.js');
+mxscript(drawDevUrl + 'js/diagramly/SuperDriveClient.js');
 mxscript(drawDevUrl + 'js/diagramly/DropboxFile.js');
 mxscript(drawDevUrl + 'js/diagramly/DropboxLibrary.js');
 mxscript(drawDevUrl + 'js/diagramly/DropboxClient.js');

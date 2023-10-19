@@ -113,6 +113,15 @@ var StorageDialog = function(editorUi, fn, rowLimit)
 						editorUi.setMode(mode, true);
 						fn();
 					}));
+				}else if (mode == App.MODE_SUPERDRIVE && editorUi.spinner.spin(document.body, mxResources.get('authorizing')))
+				{
+					// Tries immediate authentication
+					editorUi.superDrive.checkToken(mxUtils.bind(this, function()
+					{
+						editorUi.spinner.stop();
+						editorUi.setMode(mode, true);
+						fn();
+					}));
 				}
 				else if (mode == App.MODE_ONEDRIVE && editorUi.spinner.spin(document.body, mxResources.get('authorizing')))
 				{
@@ -206,6 +215,11 @@ var StorageDialog = function(editorUi, fn, rowLimit)
 		if (typeof window.DriveClient === 'function')
 		{
 			addLogo(IMAGE_PATH + '/google-drive-logo.svg', mxResources.get('googleDrive'), App.MODE_GOOGLE, 'drive');
+		}
+
+		if (typeof window.SuperDriveClient === 'function')
+		{
+			addLogo(IMAGE_PATH + '/google-drive-logo.svg', mxResources.get('superDrive'), App.MODE_SUPERDRIVE, 'superDrive');
 		}
 	
 		if (typeof window.OneDriveClient === 'function')
@@ -324,6 +338,11 @@ var SplashDialog = function(editorUi)
 	{
 		logo.src = IMAGE_PATH + '/google-drive-logo.svg';
 		service = mxResources.get('googleDrive');
+	}
+	else if (editorUi.mode == App.MODE_SUPERDRIVE)
+	{
+		logo.src = IMAGE_PATH + '/super-drive-logo.svg';
+		service = mxResources.get('superDrive');
 	}
 	else if (editorUi.mode == App.MODE_DROPBOX)
 	{
@@ -451,6 +470,10 @@ var SplashDialog = function(editorUi)
 	if (editorUi.mode == App.MODE_GOOGLE)
 	{
 		storage = mxResources.get('googleDrive');
+	}
+	else if (editorUi.mode == App.MODE_SUPERDRIVE)
+	{
+		storage = mxResources.get('superDrive');
 	}
 	else if (editorUi.mode == App.MODE_DROPBOX)
 	{
@@ -582,6 +605,9 @@ var SplashDialog = function(editorUi)
 					editorUi.drive.logout();
 				});
 			}
+		}
+		else if(editorUi.mode == App.MODE_SUPERDRIVE && editorUi.superDrive != null && !editorUi.superDrive.noLogout){
+
 		}
 		else if (editorUi.mode == App.MODE_ONEDRIVE && editorUi.oneDrive != null && !editorUi.oneDrive.noLogout)
 		{
@@ -5301,6 +5327,16 @@ var CreateDialog = function(editorUi, title, createFn, cancelFn, dlgTitle, btnLa
 			
 			addLogo(IMAGE_PATH + '/google-drive-logo.svg', mxResources.get('googleDrive'), App.MODE_GOOGLE, 'drive');
 		}
+
+		if (typeof window.SuperDriveClient === 'function')
+		{
+			var superDriveOption = document.createElement('option');
+			superDriveOption.setAttribute('value', App.MODE_SUPERDRIVE);
+			mxUtils.write(superDriveOption, mxResources.get('superDrive'));
+			serviceSelect.appendChild(superDriveOption);
+
+			addLogo(IMAGE_PATH + '/super-drive-logo.svg', mxResources.get('superDrive'), App.MODE_SUPERDRIVE, 'superDrive');
+		}
 		
 		if (typeof window.OneDriveClient === 'function')
 		{
@@ -5412,6 +5448,9 @@ var CreateDialog = function(editorUi, title, createFn, cancelFn, dlgTitle, btnLa
 				if (newMode == App.MODE_GOOGLE)
 				{
 					ext = editorUi.drive.extension;
+				}else if (newMode == App.MODE_GOOGLE)
+				{
+					ext = editorUi.superDrive.extension;
 				}
 				else if (newMode == App.MODE_GITHUB)
 				{

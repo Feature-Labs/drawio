@@ -233,7 +233,7 @@ if (urlParams['extAuth'] == '1' && /((iPhone|iPod|iPad).*AppleWebKit(?!.*Version
 if (window.location.hostname == DRAWIO_LIGHTBOX_URL.substring(DRAWIO_LIGHTBOX_URL.indexOf('//') + 2))
 {
 	urlParams['lightbox'] = '1';
-}	
+}
 
 // Lightbox enables chromeless mode
 if (urlParams['lightbox'] == '1')
@@ -451,6 +451,7 @@ if (urlParams['offline'] == '1' || urlParams['demo'] == '1' ||
 	urlParams['gh'] = '0';
 	urlParams['gl'] = '0';
 	urlParams['tr'] = '0';
+	urlParams['sd'] = '0';
 }
 // Do not insert code between above and below blocks
 // se mode. Ensure this comes after the block above. 
