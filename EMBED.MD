@@ -1,5 +1,7 @@
 自定义嵌入模式 参数格式及事件列表
 
+> 更多信息请查询 https://www.drawio.com/doc/faq/embed-mode
+
 > 完成进度：50%
 
 > 请使用开发模式并指定插件：url:?dev=1&embed=1&p=sd
