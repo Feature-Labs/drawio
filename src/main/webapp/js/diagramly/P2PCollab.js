@@ -697,7 +697,7 @@ function P2PCollab(ui, sync, channelId)
 				EditorUi.debug('P2PCollab: closing socket error', e);
 			} //Ignore
 			
-			var ws = new WebSocket(window.RT_WEBSOCKET_URL + '?id=' + channelId);
+			var ws = new WebSocket(window.RT_WEBSOCKET_URL + '?id=' + channelId + (window.RT_WEBSOCKET_TOKEN ? "&token=" + window.RT_WEBSOCKET_TOKEN : ''));
 
 			if (socket == null)
 			{

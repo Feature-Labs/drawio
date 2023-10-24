@@ -38,6 +38,8 @@ Draw.loadPlugin(function(ui)
                 if (data.desc != null)
                 {
                     loadDescriptor = data.desc;
+                    window.RT_WEBSOCKET_URL = data.RT_WEBSOCKET_URL;
+                    window.RT_WEBSOCKET_TOKEN = data.RT_WEBSOCKET_TOKEN;
                 }
 
                 if (data.disableAutoSave)
