@@ -10,4 +10,4 @@ window.DRAWIO_VIEWER_URL = null; // Replace your path to the viewer js, e.g. htt
 window.DRAWIO_LIGHTBOX_URL = null; // Replace with your lightbox URL, eg. https://www.example.com
 window.DRAW_MATH_URL = 'math/es5';
 window.DRAWIO_CONFIG = null; // Replace with your custom draw.io configurations. For more details, https://www.drawio.com/doc/faq/configure-diagram-editor
-urlParams['sync'] = 'auto';
+urlParams['sync'] = 'manual';

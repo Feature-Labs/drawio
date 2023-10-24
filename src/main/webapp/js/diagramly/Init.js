@@ -38,10 +38,8 @@ window.OPEN_URL = window.OPEN_URL || window.DRAWIO_SERVER_URL + 'import';
 window.PROXY_URL = window.PROXY_URL || window.DRAWIO_SERVER_URL + 'proxy';
 window.DRAWIO_VIEWER_URL = window.DRAWIO_VIEWER_URL || null;
 window.NOTIFICATIONS_URL = window.NOTIFICATIONS_URL || window.DRAWIO_SERVER_URL + 'notifications';
-//window.RT_WEBSOCKET_URL = window.RT_WEBSOCKET_URL || ('wss://' + ((window.location.hostname == 'test.draw.io') ?
-//	'app.diagrams.net' : window.location.hostname) + '/rt');
-
-window.RT_WEBSOCKET_URL = 'ws://127.0.0.1:18001/document/draw'
+window.RT_WEBSOCKET_URL = window.RT_WEBSOCKET_URL || ('wss://' + ((window.location.hostname == 'test.draw.io') ?
+	'app.diagrams.net' : window.location.hostname) + '/rt');
 
 // Paths and files
 window.SHAPES_PATH = window.SHAPES_PATH || 'shapes';
@@ -70,38 +68,38 @@ window.DRAWIO_CONFIG = window.DRAWIO_CONFIG || null;
 // save a GET request. This requires that all resources be present in
 // the special bundle.
 window.mxLoadResources = window.mxLoadResources || false;
-window.mxLanguage = window.mxLanguage || (function()
+window.mxLanguage = window.mxLanguage || (function() 
 {
 	var lang = urlParams['lang'];
-
+	
 	// Known issue: No JSON object at this point in quirks in IE8
 	if (lang == null && typeof(JSON) != 'undefined')
 	{
 		// Cannot use mxSettings here
-		if (isLocalStorage)
+		if (isLocalStorage) 
 		{
 			try
 			{
 				var value = localStorage.getItem('.drawio-config');
-
+				
 				if (value != null)
 				{
 					lang = JSON.parse(value).language || null;
 				}
-
+				
 				if (!lang && window.mxIsElectron)
 				{
 					lang = urlParams['appLang'];
-
+					
 					if (lang != null)
 			    	{
 			    		var dash = lang.indexOf('-');
-
+			    		
 			    		if (dash >= 0)
 			    		{
 			    			lang = lang.substring(0, dash);
 			    		}
-
+			    		
 			    		lang = lang.toLowerCase();
 			    	}
 				}
@@ -114,7 +112,7 @@ window.mxLanguage = window.mxLanguage || (function()
 			}
 		}
 	}
-
+	
 	return lang;
 })();
 
@@ -175,7 +173,7 @@ if (typeof window.mxBasePath === 'undefined')
 if (window.mxLanguages == null)
 {
 	window.mxLanguages = [];
-
+	
 	// Populates the list of supported special language bundles
 	for (var lang in mxLanguageMap)
 	{
@@ -201,7 +199,7 @@ if (window.mxLanguages == null)
 		if (lang != null)
 		{
 			var dash = lang.indexOf('-');
-
+				
 			if (dash > 0)
 			{
 				lang = lang.substring(0, dash);
@@ -235,7 +233,7 @@ if (urlParams['extAuth'] == '1' && /((iPhone|iPod|iPad).*AppleWebKit(?!.*Version
 if (window.location.hostname == DRAWIO_LIGHTBOX_URL.substring(DRAWIO_LIGHTBOX_URL.indexOf('//') + 2))
 {
 	urlParams['lightbox'] = '1';
-}
+}	
 
 // Lightbox enables chromeless mode
 if (urlParams['lightbox'] == '1')
@@ -263,11 +261,11 @@ function setCurrentXml(data, filename)
 		window.parent.openFile.setData(data, filename);
 	}
 };
-
+ 
 /**
  * Returns the global UI setting before running static draw.io code
  */
-window.uiTheme = window.uiTheme || (function()
+window.uiTheme = window.uiTheme || (function() 
 {
 	var ui = urlParams['ui'];
 
@@ -283,7 +281,7 @@ window.uiTheme = window.uiTheme || (function()
 		try
 		{
 			var value = localStorage.getItem('.drawio-config');
-
+			
 			if (value != null)
 			{
 				ui = JSON.parse(value).ui || null;
@@ -296,7 +294,7 @@ window.uiTheme = window.uiTheme || (function()
 			isLocalStorage = false;
 		}
 	}
-
+	
 	// Uses simple theme on small screens in own domain standalone app
 	try
 	{
@@ -334,27 +332,27 @@ window.uiTheme = window.uiTheme || (function()
 	{
 		ui = 'dark';
 	}
-
+	
 	return ui;
 })();
 
 /**
  * Overrides splash URL parameter via local storage
  */
-(function()
+(function() 
 {
 	// Known issue: No JSON object at this point in quirks in IE8
 	if (typeof JSON !== 'undefined')
 	{
 		// Cannot use mxSettings here
-		if (isLocalStorage)
+		if (isLocalStorage) 
 		{
 			try
 			{
 				var key = (urlParams['sketch'] == '1') ? '.sketch-config' : '.drawio-config';
 				var value = localStorage.getItem(key);
 				var showSplash = true;
-
+				
 				if (value != null)
 				{
 					showSplash = JSON.parse(value).showStartScreen;
@@ -372,19 +370,19 @@ window.uiTheme = window.uiTheme || (function()
 			}
 		}
 	}
-
+	
 	// Customizes export URL
 	var ex = urlParams['export'];
 
 	if (ex != null)
 	{
 		ex = decodeURIComponent(ex);
-
+		
 		if (ex.substring(0, 7) != 'http://' &&  ex.substring(0, 8) != 'https://')
 		{
 			ex = 'http://' + ex;
 		}
-
+		
 		EXPORT_URL = ex;
 	}
 
@@ -394,15 +392,15 @@ window.uiTheme = window.uiTheme || (function()
 	if (glUrl != null)
 	{
 		glUrl = decodeURIComponent(glUrl);
-
+		
 		if (glUrl.substring(0, 7) != 'http://' &&  glUrl.substring(0, 8) != 'https://')
 		{
 			glUrl = 'http://' + glUrl;
 		}
-
+		
 		DRAWIO_GITLAB_URL = glUrl;
 	}
-
+	
 	var glId = urlParams['gitlab-id'];
 
 	if (glId != null)
@@ -415,13 +413,13 @@ window.uiTheme = window.uiTheme || (function()
 
 	//Adds hard-coded logging domain for draw.io domains
 	var host = window.location.host;
-
+	
 	if (host != 'test.draw.io')
 	{
 		var searchString = 'diagrams.net';
 		var position = host.length - searchString.length;
 		var lastIndex = host.lastIndexOf(searchString, position);
-
+		
 		if (lastIndex !== -1 && lastIndex === position)
 		{
 			window.DRAWIO_LOG_URL = 'https://log.diagrams.net';
@@ -432,7 +430,7 @@ window.uiTheme = window.uiTheme || (function()
 			var searchString = 'draw.io';
 			var position = host.length - searchString.length;
 			var lastIndex = host.lastIndexOf(searchString, position);
-
+			
 			if (lastIndex !== -1 && lastIndex === position)
 			{
 				window.DRAWIO_LOG_URL = 'https://log.draw.io';
@@ -442,7 +440,7 @@ window.uiTheme = window.uiTheme || (function()
 })();
 
 // Enables offline mode
-if (urlParams['offline'] == '1' || urlParams['demo'] == '1' ||
+if (urlParams['offline'] == '1' || urlParams['demo'] == '1' || 
 	urlParams['stealth'] == '1' || urlParams['local'] == '1' ||
 	urlParams['lockdown'] == '1')
 {
@@ -455,7 +453,7 @@ if (urlParams['offline'] == '1' || urlParams['demo'] == '1' ||
 	urlParams['tr'] = '0';
 }
 // Do not insert code between above and below blocks
-// se mode. Ensure this comes after the block above.
+// se mode. Ensure this comes after the block above. 
 if (window.location.hostname == 'se.diagrams.net')
 {
 	urlParams['db'] = '0';
