@@ -373,7 +373,7 @@ EditorUi.prototype.patchPage = function(page, diff, resolver, updateEdgeParents)
 			root = this.getCellForJson(cellDiff);
 		}
 		
-		// Handles cells becoming root (very unlikely but possible)
+		// Handles cells becoming root
 		if (root == null)
 		{
 			var id = (temp != null && temp.moved != null) ? temp.moved[''] : null;
@@ -388,6 +388,8 @@ EditorUi.prototype.patchPage = function(page, diff, resolver, updateEdgeParents)
 		{
 			model.setRoot(root);
 			page.root = root;
+			
+			EditorUi.debug('EditorUi.patchPage: Root changed', root.id);
 		}
 
 		// Inserts and updates previous and parent (hierarchy update)
@@ -398,7 +400,8 @@ EditorUi.prototype.patchPage = function(page, diff, resolver, updateEdgeParents)
 		{
 			for (var i = 0; i < diff[EditorUi.DIFF_REMOVE].length; i++)
 			{
-				var cell = model.getCell(diff[EditorUi.DIFF_REMOVE][i]);
+				var id = diff[EditorUi.DIFF_REMOVE][i];
+				var cell = model.getCell(id);
 				
 				if (cell != null)
 				{
@@ -415,9 +418,19 @@ EditorUi.prototype.patchPage = function(page, diff, resolver, updateEdgeParents)
 			
 			for (var id in diff[EditorUi.DIFF_UPDATE])
 			{
-				this.patchCell(model, model.getCell(id),
-					diff[EditorUi.DIFF_UPDATE][id],
-					(res != null) ? res[id] : null);
+				var cell = model.getCell(id);
+
+				if (cell != null)
+				{
+					this.patchCell(model, cell,
+						diff[EditorUi.DIFF_UPDATE][id],
+						(res != null) ? res[id] : null);
+				}
+				else
+				{
+					EditorUi.debug('EditorUi.patchPage: Updated cell not found',
+						id, 'diff', [diff[EditorUi.DIFF_UPDATE][id]]);
+				}
 			}
 		}
 
@@ -492,7 +505,13 @@ EditorUi.prototype.patchCellRecursive = function(page, model, cell, parentLookup
 		var addCell = mxUtils.bind(this, function(child, insert)
 		{
 			var id = (child != null) ? child.getId() : '';
-			
+
+			if (id == null)
+			{
+				EditorUi.debug('EditorUi.patchCellRecursive: Inserting cell with null id',
+					'cell', child);
+			}
+
 			// Ignores the insert if the cell is already in the model
 			if (child != null && insert)
 			{
@@ -733,7 +752,7 @@ EditorUi.prototype.getPagesForNode = function(node, nodeName)
 	{
 		var page = new DiagramPage(node.ownerDocument.createElement('diagram'));
 		page.setName(mxResources.get('pageWithNumber', [1]));
-		mxUtils.setTextContent(page.node, Graph.compressNode(node, true));
+		page.node.appendChild(node.cloneNode(true));
 		pages.push(page);
 	}
 	
@@ -773,7 +792,10 @@ EditorUi.prototype.diffPages = function(oldPages, newPages)
 			}
 			else
 			{
-				var temp = this.diffPage(oldPages[i], newPage.page);
+				this.updatePageRoot(oldPages[i]);
+				this.updatePageRoot(newPage.page);
+
+				var temp = this.diffCells(oldPages[i].root, newPage.page.root);
 				var pageDiff = {};
 
 				if (!mxUtils.isEmptyObject(temp))
@@ -847,7 +869,15 @@ EditorUi.prototype.diffPages = function(oldPages, newPages)
 EditorUi.prototype.createCellLookup = function(cell, prev, lookup)
 {
 	lookup = (lookup != null) ? lookup : {};
-	lookup[cell.getId()] = {cell: cell, prev: prev};
+
+	if (cell.getId() == null)
+	{
+		EditorUi.debug('EditorUi.createCellLookup: Ignored inserted cell with no id', cell);
+	}
+	else
+	{
+		lookup[cell.getId()] = {cell: cell, prev: prev};
+	}
 	
 	var childCount = cell.getChildCount();
 	prev = null;
@@ -873,7 +903,14 @@ EditorUi.prototype.diffCellRecursive = function(cell, prev, lookup, diff, remove
 	
 	if (newCell == null)
 	{
-		removed.push(cell.getId());
+		if (cell.getId() == null)
+		{
+			EditorUi.debug('EditorUi.diffCellRecursive: Ignored removed cell with no id', cell);
+		}
+		else
+		{
+			removed.push(cell.getId());
+		}
 	}
 	else
 	{
@@ -889,7 +926,14 @@ EditorUi.prototype.diffCellRecursive = function(cell, prev, lookup, diff, remove
 		
 		if (!mxUtils.isEmptyObject(temp))
 		{
-			diff[cell.getId()] = temp;
+			if (cell.getId() == null)
+			{
+				EditorUi.debug('EditorUi.diffCellRecursive: Ignored changed cell with no id', cell, 'diff', temp);
+			}
+			else
+			{
+				diff[cell.getId()] = temp;
+			}
 		}
 	}
 
@@ -909,32 +953,37 @@ EditorUi.prototype.diffCellRecursive = function(cell, prev, lookup, diff, remove
 /**
  * Removes all labels, user objects and styles from the given node in-place.
  */
-EditorUi.prototype.diffPage = function(oldPage, newPage)
+EditorUi.prototype.diffCells = function(oldRoot, newRoot)
 {
-	var inserted = [];
-	var removed = [];
 	var result = {};
+	var inserted = [];
+	var lookup = this.createCellLookup(newRoot);
 
-	this.updatePageRoot(oldPage);
-	this.updatePageRoot(newPage);
+	// Marks all cells as inserted if root is different
+	if (newRoot.id == oldRoot.id)
+	{
+		var removed = [];
+		var diff = this.diffCellRecursive(oldRoot, null, lookup, null, removed);
 
-	var lookup = this.createCellLookup(newPage.root);
-	var diff = this.diffCellRecursive(oldPage.root, null, lookup, diff, removed);
+		if (!mxUtils.isEmptyObject(diff))
+		{
+			result[EditorUi.DIFF_UPDATE] = diff;
+		}	
+
+		if (removed.length > 0)
+		{
+			result[EditorUi.DIFF_REMOVE] = removed;
+		}
+	}
+	else
+	{
+		EditorUi.debug('EditorUi.diffCells: Root changed', newRoot.id);
+	}
 
 	for (var id in lookup)
 	{
 		var newCell = lookup[id];
 		inserted.push(this.getJsonForCell(newCell.cell, newCell.prev));
-	}
-
-	if (!mxUtils.isEmptyObject(diff))
-	{
-		result[EditorUi.DIFF_UPDATE] = diff;
-	}
-	
-	if (removed.length > 0)
-	{
-		result[EditorUi.DIFF_REMOVE] = removed;
 	}
 	
 	if (inserted.length > 0)

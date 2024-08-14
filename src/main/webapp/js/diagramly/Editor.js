@@ -57,8 +57,9 @@
 	Editor.thinDataImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHdpZHRoPSI0OCI+PHBhdGggZD0iTTI4Ljg1IDM5LjF2LTIuMjVIMzRxMS4yIDAgMi4wMjUtLjgyNVQzNi44NSAzNHYtNC45cTAtMS43NSAxLjA3NS0zLjEyNXQyLjcyNS0xLjgyNXYtLjNxLTEuNjUtLjQ1LTIuNzI1LTEuODI1UTM2Ljg1IDIwLjY1IDM2Ljg1IDE4LjlWMTRxMC0xLjItLjgyNS0yLjAyNVQzNCAxMS4xNWgtNS4xNVY4LjlIMzRxMi4xNSAwIDMuNjI1IDEuNVQzOS4xIDE0djQuOXEwIDEuMjUuODUgMi4wNzUuODUuODI1IDIuMS44MjVoLjg1djQuNGgtLjg1cS0xLjI1IDAtMi4xLjgyNS0uODUuODI1LS44NSAyLjA3NVYzNHEwIDIuMS0xLjUgMy42VDM0IDM5LjFaTTE0IDM5LjFxLTIuMTUgMC0zLjYyNS0xLjVUOC45IDM0di00LjlxMC0xLjI1LS44NS0yLjA3NS0uODUtLjgyNS0yLjEtLjgyNUg1LjF2LTQuNGguODVxMS4yNSAwIDIuMS0uODI1Ljg1LS44MjUuODUtMi4wNzVWMTRxMC0yLjEgMS41LTMuNlQxNCA4LjloNS4xNXYyLjI1SDE0cS0xLjIgMC0yLjAyNS44MjVUMTEuMTUgMTR2NC45cTAgMS43NS0xLjA3NSAzLjEyNVQ3LjM1IDIzLjg1di4zcTEuNjUuNDUgMi43MjUgMS44MjVRMTEuMTUgMjcuMzUgMTEuMTUgMjkuMVYzNHEwIDEuMi44MjUgMi4wMjVUMTQgMzYuODVoNS4xNXYyLjI1WiIvPjwvc3ZnPg==';
 	Editor.thinExpandImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHdpZHRoPSI0OCI+PHBhdGggZD0iTTI0IDMwLjEgMTIuNyAxOC43NWwxLjYtMS42IDkuNyA5LjcgOS43LTkuNyAxLjYgMS42NVoiLz48L3N2Zz4=';
 	Editor.thinGridImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDgiPjxwYXRoIGQ9Ik0yMjMuMjkxLTE1NC41cS0yOS4xMTcgMC00OC45NTQtMTkuODM3VDE1NC41LTIyMy4yOTFxMC0yOS4xMTggMTkuODM3LTQ4LjkxM1ExOTQuMTc0LTI5MiAyMjMuMjkxLTI5MnEyOS4xMTggMCA0OC45MTMgMTkuNzk2UTI5Mi0yNTIuNDA5IDI5Mi0yMjMuMjkxcTAgMjkuMTE3LTE5Ljc5NiA0OC45NTQtMTkuNzk1IDE5LjgzNy00OC45MTMgMTkuODM3Wm0yNTYuOCAwcS0yOS4wNDggMC00OC44ODUtMTkuODM3LTE5LjgzNi0xOS44MzctMTkuODM2LTQ4Ljk1NCAwLTI5LjExOCAxOS43NDUtNDguOTEzUTQ1MC44NjEtMjkyIDQ3OS45MDktMjkydDQ4Ljg4NSAxOS43OTZxMTkuODM2IDE5Ljc5NSAxOS44MzYgNDguOTEzIDAgMjkuMTE3LTE5Ljc0NSA0OC45NTQtMTkuNzQ2IDE5LjgzNy00OC43OTQgMTkuODM3Wm0yNTYuNjE4IDBxLTI5LjExOCAwLTQ4LjkxMy0xOS44MzdRNjY4LTE5NC4xNzQgNjY4LTIyMy4yOTFxMC0yOS4xMTggMTkuNzk2LTQ4LjkxM1E3MDcuNTkxLTI5MiA3MzYuNzA5LTI5MnEyOS4xMTcgMCA0OC45NTQgMTkuNzk2IDE5LjgzNyAxOS43OTUgMTkuODM3IDQ4LjkxMyAwIDI5LjExNy0xOS44MzcgNDguOTU0VDczNi43MDktMTU0LjVaTTIyMy4yOTEtNDExLjM3cS0yOS4xMTcgMC00OC45NTQtMTkuNzQ1LTE5LjgzNy0xOS43NDYtMTkuODM3LTQ4Ljc5NHQxOS44MzctNDguODg1cTE5LjgzNy0xOS44MzYgNDguOTU0LTE5LjgzNiAyOS4xMTggMCA0OC45MTMgMTkuNzQ1UTI5Mi01MDkuMTM5IDI5Mi00ODAuMDkxdC0xOS43OTYgNDguODg1cS0xOS43OTUgMTkuODM2LTQ4LjkxMyAxOS44MzZabTI1Ni44IDBxLTI5LjA0OCAwLTQ4Ljg4NS0xOS43NDUtMTkuODM2LTE5Ljc0Ni0xOS44MzYtNDguNzk0dDE5Ljc0NS00OC44ODVxMTkuNzQ2LTE5LjgzNiA0OC43OTQtMTkuODM2dDQ4Ljg4NSAxOS43NDVxMTkuODM2IDE5Ljc0NiAxOS44MzYgNDguNzk0dC0xOS43NDUgNDguODg1cS0xOS43NDYgMTkuODM2LTQ4Ljc5NCAxOS44MzZabTI1Ni42MTggMHEtMjkuMTE4IDAtNDguOTEzLTE5Ljc0NVE2NjgtNDUwLjg2MSA2NjgtNDc5LjkwOXQxOS43OTYtNDguODg1cTE5Ljc5NS0xOS44MzYgNDguOTEzLTE5LjgzNiAyOS4xMTcgMCA0OC45NTQgMTkuNzQ1IDE5LjgzNyAxOS43NDYgMTkuODM3IDQ4Ljc5NHQtMTkuODM3IDQ4Ljg4NXEtMTkuODM3IDE5LjgzNi00OC45NTQgMTkuODM2Wk0yMjMuMjkxLTY2OHEtMjkuMTE3IDAtNDguOTU0LTE5Ljc5Ni0xOS44MzctMTkuNzk1LTE5LjgzNy00OC45MTMgMC0yOS4xMTcgMTkuODM3LTQ4Ljk1NHQ0OC45NTQtMTkuODM3cTI5LjExOCAwIDQ4LjkxMyAxOS44MzdRMjkyLTc2NS44MjYgMjkyLTczNi43MDlxMCAyOS4xMTgtMTkuNzk2IDQ4LjkxM1EyNTIuNDA5LTY2OCAyMjMuMjkxLTY2OFptMjU2LjggMHEtMjkuMDQ4IDAtNDguODg1LTE5Ljc5Ni0xOS44MzYtMTkuNzk1LTE5LjgzNi00OC45MTMgMC0yOS4xMTcgMTkuNzQ1LTQ4Ljk1NCAxOS43NDYtMTkuODM3IDQ4Ljc5NC0xOS44Mzd0NDguODg1IDE5LjgzN3ExOS44MzYgMTkuODM3IDE5LjgzNiA0OC45NTQgMCAyOS4xMTgtMTkuNzQ1IDQ4LjkxM1E1MDkuMTM5LTY2OCA0ODAuMDkxLTY2OFptMjU2LjYxOCAwcS0yOS4xMTggMC00OC45MTMtMTkuNzk2UTY2OC03MDcuNTkxIDY2OC03MzYuNzA5cTAtMjkuMTE3IDE5Ljc5Ni00OC45NTQgMTkuNzk1LTE5LjgzNyA0OC45MTMtMTkuODM3IDI5LjExNyAwIDQ4Ljk1NCAxOS44Mzd0MTkuODM3IDQ4Ljk1NHEwIDI5LjExOC0xOS44MzcgNDguOTEzUTc2NS44MjYtNjY4IDczNi43MDktNjY4WiIvPjwvc3ZnPg==';
+	Editor.thinOpenImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik0yNDAtODBxLTMzIDAtNTYuNS0yMy41VDE2MC0xNjB2LTY0MHEwLTMzIDIzLjUtNTYuNVQyNDAtODgwaDMyMGwyNDAgMjQwdjI0MGgtODB2LTIwMEg1MjB2LTIwMEgyNDB2NjQwaDM2MHY4MEgyNDBabTYzOCAxNUw3NjAtMTgzdjg5aC04MHYtMjI2aDIyNnY4MGgtOTBsMTE4IDExOC01NiA1N1ptLTYzOC05NXYtNjQwIDY0MFoiLz48L3N2Zz4=';
 	Editor.selectImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHdpZHRoPSI0OCI+PHBhdGggZD0iTTkgNDJxLTEuMjUgMC0yLjEyNS0uODc1VDYgMzlWOXEwLTEuMjUuODc1LTIuMTI1VDkgNmgzMHEuNyAwIDEuMjc1LjN0LjkyNS43TDM5IDkuMlY5SDl2MzBoMzBWMjEuODVsMy0zVjM5cTAgMS4yNS0uODc1IDIuMTI1VDM5IDQyWm0xNC4wNS04LjQtMTEuMS0xMS4xIDIuMS0yLjEgOSA5IDE5LjEtMTkuMSAyLjEgMi4xWiIvPjwvc3ZnPg==';
-	
+
 	/**
 	 * 
 	 */
@@ -201,6 +202,16 @@
 		/.*\.diagrams\.net$/.test(window.location.hostname) ||
 		/.*\.draw\.io$/.test(window.location.hostname));
 
+	// Checks access to service worker in sandboxed context
+	try
+	{
+		Editor.enableServiceWorker && navigator.serviceWorker;
+	}
+	catch (e)
+	{
+		Editor.enableServiceWorker = false;
+	}
+
 	/**
 	 * Specifies if web fonts are enabled.
 	 */
@@ -241,7 +252,7 @@
 	 * Specifies if XML files should be compressed by default. Default is false.
 	 */
 	Editor.defaultCompressed = false;
-
+	
 	/**
 	 * Specifies if XML files should be compressed. Default is true.
 	 */
@@ -253,6 +264,71 @@
 	Editor.globalVars = null;
 
 	/**
+	 * Default border for image export (to allow for sketch style).
+	 */
+	Editor.defaultBorder = 5;
+
+	/**
+	 * Specifies if cell metadata should be added to SVG output. Default is false.
+	 */
+	Editor.addSvgMetadata = false;
+
+	/**
+	 * Specifies animations should be enabled. Default is true.
+	 */
+	Editor.enableAnimations = true;
+
+	/**
+	 * Specifies if ChatGPT should be enabled. Default is true only
+	 * on app.diagrams.net (including test and preprod).
+	 */
+	Editor.enableChatGpt = (/test\.draw\.io$/.test(window.location.hostname)) ||
+		(/preprod\.diagrams\.net$/.test(window.location.hostname)) ||
+		(/app\.diagrams\.net$/.test(window.location.hostname));
+
+	/**
+	 * Specifies the ChatGPT API key. Default is null.
+	 */
+	Editor.gptApiKey = (urlParams['gpt-api-key'] != null) ?
+		decodeURIComponent(urlParams['gpt-api-key']) : null;
+
+	/**
+	 * Specifies the ChatGPT model. Default is 'gpt-3.5-turbo'.
+	 */
+	Editor.gptModel = (urlParams['gpt-model'] != null) ?
+		decodeURIComponent(urlParams['gpt-model']) : 'gpt-3.5-turbo';
+	
+	/**
+	 * Specifies the ChatGPT endpoint URL. Default is
+	 * 'https://api.openai.com/v1/chat/completions'.
+	 */
+	Editor.gptUrl = (urlParams['gpt-url'] != null) ?
+		decodeURIComponent(urlParams['gpt-url']) :
+		'https://api.openai.com/v1/chat/completions';
+	
+	/**
+	 * Specifies if data URIs should be replaced with SVG sub-trees in SVG export.
+	 * Default is true.
+	 */
+	Editor.replaceSvgDataUris = true;
+	
+	/**
+	 * Specifies if foreignObject alternate content should be replaced with an image
+	 * of the HTML text. Default is true.
+	 */
+	Editor.foreignObjectImages = true;
+		
+	/**
+	 * Specifies the scale used to rasterize SVG images. Default is 4.
+	 */
+	Editor.svgRasterScale = 4;
+			
+	/**
+	 * Specifies the scale used to rasterize HTML markup. Default is 4.
+	 */
+	Editor.htmlRasterScale = 4;
+	
+	/**
 	 * Reference to the config object passed to <configure>.
 	 */
 	Editor.config = null;
@@ -263,11 +339,6 @@
 	 * mxSettings.parse, then the settings are reset.
 	 */
 	Editor.configVersion = null;
-
-	/**
-	 * Default border for image export (to allow for sketch style).
-	 */
-	Editor.defaultBorder = 5;
 
 	/**
 	 * Common properties for all edges.
@@ -342,9 +413,56 @@
         	isVisible: function(state, format)
         {
         	return mxUtils.getValue(state.style, 'sketch', (urlParams['rough'] == '1') ? '1' : '0') == '1';
-        }}
+        }},
+		{name: mxConstants.STYLE_SHADOWCOLOR, dispName: 'Shadow Color', type: 'color', getDefaultValue: function()
+		{
+			return mxConstants.SHADOWCOLOR;
+		}, isVisible: function(state, format)
+		{
+			return mxUtils.getValue(state.style, mxConstants.STYLE_SHADOW, '0') == '1' ||
+				mxUtils.getValue(state.style, mxConstants.STYLE_TEXT_SHADOW, '0') == '1';
+		}},
+		{name: mxConstants.STYLE_SHADOW_OPACITY, dispName: 'Shadow Opacity', type: 'int', min: 0, max: 100, getDefaultValue: function()
+		{
+			return mxConstants.SHADOW_OPACITY * 100;
+		}, isVisible: function(state, format)
+		{
+			return mxUtils.getValue(state.style, mxConstants.STYLE_SHADOW, '0') == '1' ||
+				mxUtils.getValue(state.style, mxConstants.STYLE_TEXT_SHADOW, '0') == '1';
+		}},
+		{name: mxConstants.STYLE_SHADOW_OFFSET_X, dispName: 'Shadow Offset X', type: 'int', getDefaultValue: function()
+		{
+			return mxConstants.SHADOW_OFFSET_X;
+		}, isVisible: function(state, format)
+		{
+			return mxUtils.getValue(state.style, mxConstants.STYLE_SHADOW, '0') == '1' ||
+				mxUtils.getValue(state.style, mxConstants.STYLE_TEXT_SHADOW, '0') == '1';
+		}},
+		{name: mxConstants.STYLE_SHADOW_OFFSET_Y, dispName: 'Shadow Offset Y', type: 'int', getDefaultValue: function()
+		{
+			return mxConstants.SHADOW_OFFSET_Y;
+		}, isVisible: function(state, format)
+		{
+			return mxUtils.getValue(state.style, mxConstants.STYLE_SHADOW, '0') == '1' ||
+				mxUtils.getValue(state.style, mxConstants.STYLE_TEXT_SHADOW, '0') == '1';
+		}},
+		{name: mxConstants.STYLE_SHADOW_BLUR, dispName: 'Shadow Blur', type: 'int', min: 0, getDefaultValue: function()
+		{
+			return mxConstants.SHADOW_BLUR;
+		}, isVisible: function(state, format)
+		{
+			return mxUtils.getValue(state.style, mxConstants.STYLE_SHADOW, '0') == '1' ||
+				mxUtils.getValue(state.style, mxConstants.STYLE_TEXT_SHADOW, '0') == '1';
+		}},
+        {name: 'linecap', dispName: 'Line Cap', type: 'enum', defVal: null,
+        	enumList: [{val: null, dispName: 'Flat'}, {val: 'round', dispName: 'Round'}, {val: 'square', dispName: 'Square'}]
+        },
+		{name: 'linejoin', dispName: 'Line Join', type: 'enum', defVal: null,
+        	enumList: [{val: null, dispName: 'Miter'}, {val: 'arcs', dispName: 'Arcs'}, {val: 'bevel', dispName: 'Bevel'},
+			{val: 'miter-clip', dispName: 'Miter-Clip'}, {val: 'round', dispName: 'Round'}]
+        },
 	];
-
+	
 	/**
 	 * Common properties for all edges.
 	 */
@@ -361,15 +479,41 @@
         {
     		return mxUtils.getValue(state.style, mxConstants.STYLE_EDGE, null) == 'orthogonalEdgeStyle';
         }},
+        {name: 'segment', dispName: 'Segment Size', type: 'int', min: 0, defVal: mxConstants.ENTITY_SEGMENT, isVisible: function(state)
+        {
+    		return mxUtils.getValue(state.style, mxConstants.STYLE_EDGE, null) == 'entityRelationEdgeStyle';
+        }},
         {name: 'fillOpacity', dispName: 'Fill Opacity', type: 'int', min: 0, max: 100, defVal: 100},
         {name: 'strokeOpacity', dispName: 'Stroke Opacity', type: 'int', min: 0, max: 100, defVal: 100},
         {name: 'startFill', dispName: 'Start Fill', type: 'bool', defVal: true},
+		{name: 'startFillColor', dispName: 'Start Fill Color', type: 'color', defVal: null},
         {name: 'endFill', dispName: 'End Fill', type: 'bool', defVal: true},
+		{name: 'endFillColor', dispName: 'End Fill Color', type: 'color', defVal: null},
         {name: 'perimeterSpacing', dispName: 'Terminal Spacing', type: 'float', defVal: 0},
         {name: 'anchorPointDirection', dispName: 'Anchor Direction', type: 'bool', defVal: true},
         {name: 'snapToPoint', dispName: 'Snap to Point', type: 'bool', defVal: false},
+        {name: 'dashPattern', dispName: 'Dash Pattern', type: 'numbers', defVal: ''},
         {name: 'fixDash', dispName: 'Fixed Dash', type: 'bool', defVal: false},
-        {name: 'editable', dispName: 'Editable', type: 'bool', defVal: true},
+		{name: 'flowAnimationDuration', dispName: 'Flow Duration', type: 'int', defVal: 500, isVisible: function(state)
+		{
+			return mxUtils.getValue(state.style, 'flowAnimation', null) == '1';
+		}},
+		{name: 'flowAnimationTimingFunction', dispName: 'Flow Timing', type: 'enum', defVal: 'linear',
+			enumList: [{val: 'linear', dispName: 'Linear'}, {val: 'ease', dispName: 'Ease'}, {val: 'ease-in', dispName: 'Ease-in'},
+			{val: 'ease-out', dispName: 'Ease-out'}, {val: 'ease-in-out', dispName: 'Ease-in-out'}], isVisible: function(state)
+			{
+				return mxUtils.getValue(state.style, 'flowAnimation', null) == '1';
+			}
+		},
+		{name: 'flowAnimationDirection', dispName: 'Flow Direction', type: 'enum', defVal: 'normal',
+			enumList: [{val: 'normal', dispName: 'Normal'}, {val: 'reverse', dispName: 'Reverse'},
+			{val: 'alternate', dispName: 'Alternate'}, {val: 'alternate-reverse', dispName: 'Alternate-Reverse'}],
+			isVisible: function(state)
+			{
+				return mxUtils.getValue(state.style, 'flowAnimation', null) == '1';
+			}
+		},
+		{name: 'editable', dispName: 'Editable', type: 'bool', defVal: true},
         {name: 'metaEdit', dispName: 'Edit Dialog', type: 'bool', defVal: false},
         {name: 'backgroundOutline', dispName: 'Background Outline', type: 'bool', defVal: false},
         {name: 'bendable', dispName: 'Bendable', type: 'bool', defVal: true},
@@ -377,7 +521,6 @@
         {name: 'cloneable', dispName: 'Cloneable', type: 'bool', defVal: true},
         {name: 'deletable', dispName: 'Deletable', type: 'bool', defVal: true},
         {name: 'noJump', dispName: 'No Jumps', type: 'bool', defVal: false},
-        {name: 'flowAnimation', dispName: 'Flow Animation', type: 'bool', defVal: false},
 		{name: 'ignoreEdge', dispName: 'Ignore Edge', type: 'bool', defVal: false},
         {name: 'orthogonalLoop', dispName: 'Loop Routing', type: 'bool', defVal: false},
 		{name: 'orthogonal', dispName: 'Orthogonal', type: 'bool', defVal: false}
@@ -521,6 +664,12 @@
     		return geo != null && !geo.relative;
         }},
         {name: 'autosize', dispName: 'Autosize', type: 'bool', defVal: false},
+		{name: 'autosizeGrid', dispName: 'Autosize Grid', type: 'enum', defVal: null,
+        	enumList: [{val: null, dispName: 'Default'}, {val: '1', dispName: 'Enabled'}, {val: '0', dispName: 'Disabled'}], isVisible: function(state, format)
+			{
+				return state.vertices.length > 0 && format.editorUi.editor.graph.isAutoSizeCell(state.vertices[0]);
+			}
+        },
         {name: 'fixedWidth', dispName: 'Fixed Width', type: 'bool', defVal: false},
         {name: 'resizable', dispName: 'Resizable', type: 'bool', defVal: true},
         {name: 'resizeWidth', dispName: 'Resize Width', type: 'bool', defVal: false},
@@ -534,11 +683,12 @@
         {
         	var fillColor = mxUtils.getValue(state.style, mxConstants.STYLE_FILLCOLOR, null);
         	
-        	return format.editorUi.editor.graph.isSwimlane(state.vertices[0]) ||
+        	return !mxShape.forceFilledPointerEvents ||
+				(format.editorUi.editor.graph.isSwimlane(state.vertices[0]) ||
         		fillColor == null || fillColor == mxConstants.NONE ||
 				mxUtils.getValue(state.style, mxConstants.STYLE_FILL_OPACITY, 100) == 0 ||
 				mxUtils.getValue(state.style, mxConstants.STYLE_OPACITY, 100) == 0 ||
-				state.style['pointerEvents'] != null;
+				state.style['pointerEvents'] != null);
         }},
         {name: 'moveCells', dispName: 'Move Cells on Fold', type: 'bool', defVal: false, isVisible: function(state, format)
         {
@@ -940,6 +1090,12 @@
 			
 			var fillStyle = mxUtils.getValue(this.shape.style, 'fillStyle', 'auto');
 			
+			// Dots fill style is disable due to performance problems
+			if (fillStyle == 'dots')
+			{
+				fillStyle = 'auto';
+			}
+			
 			if (fillStyle == 'auto')
 			{
 				// One of the following backgrounds for solid fill
@@ -958,7 +1114,7 @@
 				fillStyle = (style.fill != null && (gradient != null || mxUtils.indexOf(
 					bg, mxUtils.hex2rgb(style.fill)) >= 0)) ? 'solid' : defs['fillStyle'];
 			}
-			
+
 			style['fillStyle'] = fillStyle;
 			
 			return style;
@@ -1518,8 +1674,9 @@
 	/**
 	 * Extracts the XML from the compressed or non-compressed text chunk.
 	 */
-	Editor.parseDiagramNode = function(diagramNode, checked)
+	Editor.parseDiagramNode = function(diagramNode, checked, allowRecurse)
 	{
+		Editor.validateDiagramNode(diagramNode);
 		var text = mxUtils.trim(mxUtils.getTextContent(diagramNode));
 		var node = null;
 		
@@ -1538,9 +1695,16 @@
 			
 			if (temp.length > 0)
 			{
+				var tempNode = temp[0];
+
+				if (allowRecurse)
+				{
+					tempNode = Editor.parseDiagramNode(tempNode, checked, false);
+				}
+
 				// Creates new document for unique IDs within mxGraphModel
 				var doc = mxUtils.createXmlDocument();
-				doc.appendChild(doc.importNode(temp[0], true));
+				doc.appendChild(doc.importNode(tempNode, true));
 				node = doc.documentElement;
 			}
 		}
@@ -1553,19 +1717,41 @@
 	 */
 	Editor.getDiagramNodeXml = function(diagramNode)
 	{
-		var text = mxUtils.getTextContent(diagramNode);
+		Editor.validateDiagramNode(diagramNode);
+		var text = mxUtils.getNodeValue(diagramNode);
 		var xml = null;
 		
 		if (text.length > 0)
 		{
 			xml = Graph.decompress(text);
 		}
-		else if (diagramNode.firstChild != null)
+		else
 		{
-			xml = mxUtils.getXml(diagramNode.firstChild);
+			var temp = diagramNode.getElementsByTagName('mxGraphModel');
+
+			if (temp != null && temp.length > 0)
+			{
+				xml = mxUtils.getXml(temp[0]);
+			}
 		}
 		
 		return xml;
+	};
+
+	/**
+	 * Initializes diagram nodes with no content.
+	 */
+	Editor.validateDiagramNode = function(diagramNode)
+	{
+		if (mxUtils.trim(mxUtils.getTextContent(diagramNode)).length == 0 &&
+			mxUtils.getChildNodes(diagramNode).length == 0)
+		{
+			var codec = new mxCodec();
+			var model = new mxGraphModel();
+			diagramNode.appendChild(codec.encode(model));
+		}
+
+		return diagramNode;
 	};
 
 	/**
@@ -1573,12 +1759,13 @@
 	 */
 	Editor.extractGraphModelFromPdf = function(base64)
 	{
+		var result = null;
 		base64 = base64.substring(base64.indexOf(',') + 1);
 
 		// Workaround for invalid character error in Safari
 		var f = (window.atob && !mxClient.IS_SF) ? atob(base64) : Base64.decode(base64, true);
-		
-		//The new format of embedding diagram XML as embedded file (attachment) is in PDF 1.7
+
+		// Extracts Subject or Embedded file attachment from PDF 1.7
 		if (f.substring(0, 8) == '%PDF-1.7')
 		{
 			var blockStart = f.indexOf('EmbeddedFile'); 
@@ -1592,80 +1779,125 @@
 				{
 					var streamEnd = f.indexOf('endstream', streamStart - 1);
 				
-					return pako.inflateRaw(Graph.stringToArrayBuffer(f.substring(streamStart, streamEnd)), {to: 'string'});
+					return pako.inflateRaw(Graph.stringToArrayBuffer(
+						f.substring(streamStart, streamEnd)), {to: 'string'});
 				}
 			}
-			
-			//Not found
-			return null;
-		}
-		
-		var check = '/Subject (%3Cmxfile';
-		var result = null;
-		var curline = '';
-		var checked = 0;
-		var pos = 0;
-		var obj = [];
-		var buf = null;
-		var nr = null;
-		
-		while (pos < f.length)
-		{
-			var b = f.charCodeAt(pos);
-			pos += 1;
-			
-			if (b != 10)
+
+			var last = f.indexOf('/ObjStm');
+
+			while (last > 0)
 			{
-				curline += String.fromCharCode(b);
-			}
-			
-			if (b == check.charCodeAt(checked))
-			{
-				checked++;
-			}
-			else
-			{
-				checked = 0;
-			}
-			
-			if (checked == check.length)
-			{
-				var end = f.indexOf('%3C%2Fmxfile%3E)', pos) + 15; //15 is the length of encoded </mxfile>
-				pos -= 9; //9 is the length of encoded <mxfile
+				var streamStart = f.indexOf('stream', last) + 9; //the start of the stream [skipping header check]
+				var streamEnd = f.indexOf('endstream', streamStart - 1);
 				
-				// Default case is XML inlined in Subject metadata
-				if (end > pos)
+				function hex_to_ascii(hex)
 				{
-					result = f.substring(pos, end);
+					var str = [];
 					
+					for (var n = 0; n < hex.length; n += 2)
+					{
+						var code = hex.substr(n, 2);
+
+						// Encoded mxfile is URI encoded ASCII
+						if (code != '00')
+						{
+							str.push(String.fromCharCode(parseInt(code, 16)));
+						}
+					}
+
+					return str.join('');
+				};
+
+				var text = pako.inflateRaw(Graph.stringToArrayBuffer(
+					f.substring(streamStart, streamEnd)), {to: 'string'});
+				var subj = text.indexOf('/Subject <');
+
+				// Extracts Subject from PDF 1.4
+				if (subj > 0)
+				{
+					var temp = text.substring(subj + 14, text.indexOf('>', subj));
+
+					if (temp != null)
+					{
+						result = hex_to_ascii(temp);
+					}
+
 					break;
 				}
+
+				last = f.indexOf('/ObjStm', last + 1);
 			}
+		}
+
+		// Extracts subject from PDF 1.4
+		if (result == null && f.substring(0, 8) == '%PDF-1.4')
+		{
+			var check = '/Subject (%3Cmxfile';
+			var curline = '';
+			var checked = 0;
+			var pos = 0;
+			var obj = [];
+			var buf = null;
 			
-			// Creates table for lookup if no inline data is found
-			if (b == 10)
+			while (pos < f.length)
 			{
-				if (curline == 'endobj')
+				var b = f.charCodeAt(pos);
+				pos += 1;
+				
+				if (b != 10)
 				{
-					buf = null;
-				}
-				else if (curline.substring(curline.length - 3, curline.length) == 'obj' ||
-					curline == 'xref' || curline == 'trailer')
-				{
-					buf = [];
-					obj[curline.split(' ')[0]] = buf;
-				}
-				else if (buf != null)
-				{
-					buf.push(curline);
+					curline += String.fromCharCode(b);
 				}
 				
-				curline = '';
+				if (b == check.charCodeAt(checked))
+				{
+					checked++;
+				}
+				else
+				{
+					checked = 0;
+				}
+				
+				if (checked == check.length)
+				{
+					var end = f.indexOf('%3C%2Fmxfile%3E', pos) + 15; //15 is the length of encoded </mxfile>
+					pos -= 9; //9 is the length of encoded <mxfile
+
+					// Default case is XML inlined in Subject metadata
+					if (end > pos)
+					{
+						result = f.substring(pos, end);
+
+						break;
+					}
+				}
+				
+				// Creates table for lookup if no inline data is found
+				if (b == 10)
+				{
+					if (curline == 'endobj')
+					{
+						buf = null;
+					}
+					else if (curline.substring(curline.length - 3, curline.length) == 'obj' ||
+						curline == 'xref' || curline == 'trailer')
+					{
+						buf = [];
+						obj[curline.split(' ')[0]] = buf;
+					}
+					else if (buf != null)
+					{
+						buf.push(curline);
+					}
+					
+					curline = '';
+				}
 			}
 		}
 		
 		// Extract XML via references
-		if (result == null)
+		if (result == null && obj != null)
 		{
 			result = Editor.extractGraphModelFromXref(obj);
 		}
@@ -1673,8 +1905,8 @@
 		if (result != null)
 		{
 			result = decodeURIComponent(result.
-					replace(/\\\(/g, "(").
-					replace(/\\\)/g, ")"));
+				replace(/\\\(/g, "(").
+				replace(/\\\)/g, ")"));
 		}
 		
 		return result;
@@ -1822,6 +2054,11 @@
 				Graph.prototype.defaultEdgeLength = config.defaultEdgeLength
 			}
 
+			if (config.selectParentLayer != null)
+			{
+				Graph.selectParentLayer = config.selectParentLayer
+			}
+
 			if (config.autosaveDelay != null)
 			{
 				DrawioFile.prototype.autosaveDelay = config.autosaveDelay
@@ -1920,6 +2157,16 @@
 				var t = document.getElementsByTagName('script')[0];
 			  	t.parentNode.insertBefore(s, t);
 			}
+
+			if (config.expandLibraries != null)
+			{
+				Sidebar.prototype.expandLibraries = config.expandLibraries;
+			}
+			
+			if (config.appendCustomLibraries != null)
+			{
+				Sidebar.prototype.appendCustomLibraries = config.appendCustomLibraries;
+			}
 			
 			// Configures the custom libraries
 			if (config.libraries != null)
@@ -2000,6 +2247,21 @@
 				else
 				{
 					EditorUi.debug('Configuration Error: Float > 1 expected for zoomFactor');
+				}
+			}
+
+			// Overrides default grid size
+			if (config.defaultGridSize != null)
+			{
+				var val = parseInt(config.defaultGridSize);
+				
+				if (!isNaN(val) && val > 0)
+				{
+					mxGraph.prototype.gridSize = val;
+				}
+				else
+				{
+					EditorUi.debug('Configuration Error: Int > 0 expected for defaultGridSize');
 				}
 			}
 
@@ -2133,6 +2395,66 @@
 			{
 				DrawioFile.RESTRICT_EXPORT = config.restrictExport;
 			}
+			
+			if (config.replaceSvgDataUris != null)
+			{
+				Editor.replaceSvgDataUris = config.replaceSvgDataUris;
+			}
+
+			if (config.foreignObjectImages != null)
+			{
+				Editor.foreignObjectImages = config.foreignObjectImages;
+			}
+
+			if (config.shadowColor != null)
+			{
+				mxConstants.SHADOW_COLOR = config.shadowColor;
+			}
+
+			if (config.shadowOpacity != null)
+			{
+				mxConstants.SHADOW_OPACITY = config.shadowOpacity;
+			}
+
+			if (config.shadowOffsetX != null)
+			{
+				mxConstants.SHADOW_OFFSET_X = config.shadowOffsetX;
+			}
+
+			if (config.shadowOffsetY != null)
+			{
+				mxConstants.SHADOW_OFFSET_Y = config.shadowOffsetY;
+			}
+
+			if (config.shadowBlur != null)
+			{
+				mxConstants.SHADOW_BLUR = config.shadowBlur;
+			}
+
+			if (config.enableAnimations != null)
+			{
+				Editor.enableAnimations = config.enableAnimations;
+			}
+			
+			if (config.enableChatGpt != null)
+			{
+				Editor.enableChatGpt = config.enableChatGpt;
+			}
+
+			if (config.gptApiKey != null)
+			{
+				Editor.gptApiKey = config.gptApiKey;
+			}
+
+			if (config.gptModel != null)
+			{
+				Editor.gptModel = config.gptModel;
+			}
+
+			if (config.gptUrl != null)
+			{
+				Editor.gptUrl = config.gptUrl;
+			}
 		}
 	};
 	
@@ -2193,6 +2515,11 @@
      * Prefix for URLs that reference Google fonts.
      */
 	Editor.GOOGLE_FONTS = 'https://fonts.googleapis.com/css?family=';
+     
+    /**
+     * Prefix for URLs that reference Google fonts with CSS2.
+     */
+	Editor.GOOGLE_FONTS_CSS2 = 'https://fonts.googleapis.com/css2?family=';
     
 	/**
 	 * Alphabet for global unique IDs.
@@ -2239,11 +2566,6 @@
 		{description: 'diagramSvgDesc', extension: 'svg', mimeType: 'image/svg'},
 		{description: 'diagramHtmlDesc', extension: 'html', mimeType: 'text/html'}];
 	
-	if (urlParams['save-dialog'] == '0')
-	{
-		Editor.prototype.diagramFileTypes.push({description: 'diagramXmlDesc', extension: 'xml', mimeType: 'text/xml'});
-	}
-
 	/**
 	 * Known file types.
 	 */
@@ -2577,7 +2899,8 @@
 			{
 				options:
 				{
-					skipHtmlTags: {'[+]': ['text']}
+					skipHtmlTags: {'[+]': ['text']},
+					ignoreHtmlClass: 'geDisableMathJax'
 				},
 				loader:
 				{
@@ -2698,8 +3021,7 @@
 			/app\.diagrams\.net$/.test(window.location.hostname)) &&
 			!this.isCorsEnabledForUrl(url))
 		{
-			var isVisioFilename = /(\.v(dx|sdx?))($|\?)/i.test(url) ||
-				/(\.vs(x|sx?))($|\?)/i.test(url);
+			var isVisioFilename = EditorUi.isVisioFilename(url);
 			var binary = /\.png$/i.test(url) || /\.pdf$/i.test(url);
 			var base64 = binary || isVisioFilename;
 			var nocache = 't=' + new Date().getTime();
@@ -2756,20 +3078,16 @@
 		
 		converter.convert = function(src)
 		{
-			if (src != null)
+			if (src != null && navigator.onLine)
 			{
 				var remote = src.substring(0, 7) == 'http://' || src.substring(0, 8) == 'https://';
 				
-				if (remote && !navigator.onLine)
-				{
-					src = Editor.svgBrokenImage.src;
-				}
-				else if (remote && src.substring(0, converter.baseUrl.length) != converter.baseUrl &&
+				if (remote && src.substring(0, converter.baseUrl.length) != converter.baseUrl &&
 						(!self.crossOriginImages || !self.isCorsEnabledForUrl(src)))
 				{
 					src = PROXY_URL + '?url=' + encodeURIComponent(src);
 				}
-				else if (src.substring(0, 19) != 'chrome-extension://' && !mxClient.IS_CHROMEAPP)
+				else if (src.substring(0, 19) != 'chrome-extension://')
 				{
 					src = convert.apply(this, arguments);
 				}
@@ -2792,7 +3110,7 @@
 	/**
 	 * 
 	 */
-	Editor.prototype.convertImageToDataUri = function(url, callback, error)
+	Editor.prototype.convertImageToDataUri = function(url, callback, error, convertScale, forceConvert)
 	{
 		try
 		{
@@ -2801,29 +3119,51 @@
 			var timeoutThread = window.setTimeout(mxUtils.bind(this, function()
 			{
 				acceptResponse = false;
-				callback(Editor.svgBrokenImage.src);
+				callback(url);
 			}), this.timeout);
+
+			// Fallback to raster image if SVG cannot be loaded
+			var svgError = mxUtils.bind(this, function()
+			{
+				if (convertScale != null)
+				{
+					this.convertImageToDataUri(url, callback, error, convertScale, true);
+				}
+				else
+				{
+					callback(url);
+				}
+			});
 	
-			if (/(\.svg)$/i.test(url))
+			if (/(\.svg)$/i.test(url) && !forceConvert)
 			{
 				mxUtils.get(url, mxUtils.bind(this, function(req)
 				{
 			    	window.clearTimeout(timeoutThread);
-					
+
 					if (acceptResponse)
 					{
-						callback(Editor.createSvgDataUri(req.getText()));
+						if (req.getStatus() < 200 || req.getStatus() > 299)
+						{
+							svgError();
+						}
+						else
+						{
+							callback(Editor.createSvgDataUri(req.getText()));
+						}
+
+						
 					}
 				}),
-				function()
+				mxUtils.bind(this, function()
 				{
 			    	window.clearTimeout(timeoutThread);
-					
+
 					if (acceptResponse)
 					{
-						callback(Editor.svgBrokenImage.src);
+						svgError();
 					}
-				});
+				}));
 			}
 			else
 			{
@@ -2842,17 +3182,21 @@
 					{
 				        try
 				        {
+							convertScale = (convertScale != null &&
+								forceConvert) ? convertScale : 1;
+
 					        var canvas = document.createElement('canvas');
 					        var ctx = canvas.getContext('2d');
-					        canvas.height = img.height;
-					        canvas.width = img.width;
+							ctx.scale(convertScale, convertScale);
+					        canvas.height = img.height * convertScale;
+					        canvas.width = img.width * convertScale;
 					        ctx.drawImage(img, 0, 0);
-
+							
 				        	callback(canvas.toDataURL());
 				        }
 				        catch (e)
 				        {
-			        		callback(Editor.svgBrokenImage.src);
+			        		callback(url);
 				        }
 					}
 			    };
@@ -2869,7 +3213,7 @@
 						}
 						else
 						{
-							callback(Editor.svgBrokenImage.src);
+							callback(url);
 						}
 					}
 			    };
@@ -2885,11 +3229,10 @@
 			}
 			else
 			{
-				callback(Editor.svgBrokenImage.src);
+				callback(url);
 			}
 		}
 	};
-	
 	
 	/**
 	 * Converts all images in the SVG output to data URIs for immediate rendering
@@ -2902,19 +3245,16 @@
 			converter = this.createImageUrlConverter();
 		}
 		
-		// Barrier for asynchronous image loading
-		var counter = 0;
-		
-		function inc()
+		// Queues image conversion and executes in order
+		var pending = [];
+
+		function next()
 		{
-			counter++;
-		};
-		
-		function dec()
-		{
-			counter--;
-			
-			if (counter == 0)
+			if (pending.length > 0)
+			{
+				pending.shift()();
+			}
+			else
 			{
 				callback(svgRoot);
 			}
@@ -2930,47 +3270,55 @@
 			{
 				(mxUtils.bind(this, function(img)
 				{
-					try
+					pending.push(mxUtils.bind(this, function()
 					{
-						if (img != null)
+						try
 						{
-							var src = converter.convert(img.getAttribute(srcAttr));
-				        	
-							// Data URIs are pass-through
-							if (src != null && src.substring(0, 5) != 'data:')
+							if (img != null)
 							{
-								var tmp = cache[src];
-								
-								if (tmp == null)
+								var src = converter.convert(img.getAttribute(srcAttr));
+
+								// Data URIs are pass-through
+								if (src != null && src.substring(0, 5) != 'data:')
 								{
-									inc();
-									
-									this.convertImageToDataUri(src, function(uri)
+									var tmp = cache[src];
+
+									if (tmp == null)
 									{
-										if (uri != null)
+										this.convertImageToDataUri(src, function(uri)
 										{
-											cache[src] = uri;
-											img.setAttribute(srcAttr, uri);
-										}
-										
-										dec();
-									});
+											if (uri != null)
+											{
+												cache[src] = uri;
+												img.setAttribute(srcAttr, uri);
+											}
+											
+											next();
+										}, null, Editor.svgRasterScale);
+									}
+									else
+									{
+										img.setAttribute(srcAttr, tmp);
+
+										next();
+									}
 								}
 								else
 								{
-									img.setAttribute(srcAttr, tmp);
+									if (src != null)
+									{
+										img.setAttribute(srcAttr, src);
+									}
+
+									next();
 								}
 							}
-							else if (src != null)
-							{
-								img.setAttribute(srcAttr, src);
-							}
 						}
-					}
-					catch (e)
-					{
-						// ignore
-					}
+						catch (e)
+						{
+							next();
+						}
+					}));
 				}))(images[i]);
 			}
 		});
@@ -2979,14 +3327,9 @@
 		// LATER: Add support for images in CSS
 		convertImages('image', 'xlink:href');
 		convertImages('img', 'src');
-		
-		// All from cache or no images
-		if (counter == 0)
-		{
-			callback(svgRoot);
-		}
+		next();
 	};
-
+		
 	/**
 	 * Base64 encodes the given string. This method seems to be more
 	 * robust for encoding PNG from binary AJAX responses.
@@ -3414,7 +3757,7 @@
 						{
 							waiting++;
 							
-							this.loadUrl(fontUrl, mxUtils.bind(this, function(css)
+							this.loadUrl(Graph.rewriteGoogleFontUrl(fontUrl), mxUtils.bind(this, function(css)
 		                    {
 								this.cachedGoogleFonts[fontUrl] = css;
 								content.push(css + '\n');
@@ -3422,7 +3765,6 @@
 		                        googleCssDone();
 		                    }), mxUtils.bind(this, function(err)
 		                    {
-		                        // LATER: handle error
 		                        waiting--;
 								content.push('@import url(' + fontUrl + ');\n');
 		                        googleCssDone();
@@ -3485,36 +3827,43 @@
 		// Creates defs element if not available
 		if (fontCss != null)
 		{
-			var defs = svgRoot.getElementsByTagName('defs');
-			var svgDoc = svgRoot.ownerDocument;
-			var defsElt = null;
-			
-			if (defs.length == 0)
+			var defsElt = mxUtils.getSvgDefs(svgRoot);
+
+			// Moves imports to separate style element
+			var lines = fontCss.split('\n');
+			var imports = [];
+			var other = [];
+
+			for (var i = 0; i < lines.length; i++)
 			{
-				defsElt = (svgDoc.createElementNS != null) ?
-					svgDoc.createElementNS(mxConstants.NS_SVG, 'defs') :
-					svgDoc.createElement('defs');
-				
-				if (svgRoot.firstChild != null)
+				if (lines[i].substring(0, 7) == '@import')
 				{
-					svgRoot.insertBefore(defsElt, svgRoot.firstChild);
+					imports.push(lines[i]);
 				}
 				else
 				{
-					svgRoot.appendChild(defsElt);
+					other.push(lines[i]);
 				}
 			}
-			else
-			{
-				defsElt = defs[0];
-			}
-
+			
+			var svgDoc = svgRoot.ownerDocument;
 			var style = (svgDoc.createElementNS != null) ?
 				svgDoc.createElementNS(mxConstants.NS_SVG, 'style') :
 				svgDoc.createElement('style');
 			style.setAttribute('type', 'text/css');
-			mxUtils.setTextContent(style, fontCss);
-			defsElt.appendChild(style);
+
+			if (imports.length > 0)
+			{
+				mxUtils.setTextContent(style, imports.join('\n'));
+				defsElt.appendChild(style);
+			}
+
+			if (other.length > 0)
+			{
+				style = style.cloneNode(false);
+				mxUtils.setTextContent(style, other.join('\n'));
+				defsElt.appendChild(style);
+			}
 		}
 	};
 	
@@ -4710,7 +5059,7 @@
 		/**
 		 * Create Properties Panel
 		 */
-		StyleFormatPanel.prototype.addProperties = function(div, properties, state)
+		BaseFormatPanel.prototype.addProperties = function(div, properties, state, hideId)
 		{
 			var that = this;
 			var graph = this.editorUi.editor.graph;
@@ -4721,98 +5070,105 @@
 				curElem.parentNode.insertBefore(newElem, curElem.nextSibling);
 			};
 			
-			function applyStyleVal(pName, newVal, prop, delIndex)
+			function applyStyleVal(pName, newVal, prop, delIndex, input)
 			{
-				graph.getModel().beginUpdate();
-				try
+				if (prop.valueChanged != null)
 				{
-					var changedProps = [];
-					var changedVals = [];
-
-					if (prop.index != null)
+					prop.valueChanged(newVal, input);
+				}
+				else
+				{
+					graph.getModel().beginUpdate();
+					try
 					{
-						var allVals = [];
-						var curVal = prop.parentRow.nextSibling;
-						
-						while(curVal && curVal.getAttribute('data-pName') == pName)
-						{
-							allVals.push(curVal.getAttribute('data-pValue'));
-							curVal = curVal.nextSibling;
-						}
-						
-						if (prop.index < allVals.length)
-						{
-							if (delIndex != null)
-							{
-								allVals.splice(delIndex, 1);
-							}
-							else
-							{
-								allVals[prop.index] = newVal;
-							}
-						}
-						else
-						{
-							allVals.push(newVal);
-						}
-						
-						if (prop.size != null && allVals.length > prop.size) //trim the array to the specifies size
-						{
-							allVals = allVals.slice(0, prop.size);
-						}
-						
-						newVal = allVals.join(',');
-						
-						if (prop.countProperty != null)
-						{
-							graph.setCellStyles(prop.countProperty, allVals.length, graph.getSelectionCells());
-							
-							changedProps.push(prop.countProperty);
-							changedVals.push(allVals.length);
-						}
-					}
+						var changedProps = [];
+						var changedVals = [];
 
-					graph.setCellStyles(pName, newVal, graph.getSelectionCells());
-					changedProps.push(pName);
-					changedVals.push(newVal);
-					
-					if (prop.dependentProps != null)
-					{
-						for (var i = 0; i < prop.dependentProps.length; i++)
+						if (prop.index != null)
 						{
-							var defVal = prop.dependentPropsDefVal[i];
-							var vals = prop.dependentPropsVals[i];
+							var allVals = [];
+							var curVal = prop.parentRow.nextSibling;
 							
-							if (vals.length > newVal)
+							while(curVal && curVal.getAttribute('data-pName') == pName)
 							{
-								vals = vals.slice(0, newVal);
+								allVals.push(curVal.getAttribute('data-pValue'));
+								curVal = curVal.nextSibling;
 							}
-							else
+							
+							if (prop.index < allVals.length)
 							{
-								for (var j = vals.length; j < newVal; j++)
+								if (delIndex != null)
 								{
-									vals.push(defVal);
+									allVals.splice(delIndex, 1);
+								}
+								else
+								{
+									allVals[prop.index] = newVal;
 								}
 							}
+							else
+							{
+								allVals.push(newVal);
+							}
 							
-							vals = vals.join(',');
-							graph.setCellStyles(prop.dependentProps[i], vals, graph.getSelectionCells());
-							changedProps.push(prop.dependentProps[i]);
-							changedVals.push(vals);
+							if (prop.size != null && allVals.length > prop.size) //trim the array to the specifies size
+							{
+								allVals = allVals.slice(0, prop.size);
+							}
+							
+							newVal = allVals.join(',');
+							
+							if (prop.countProperty != null)
+							{
+								graph.setCellStyles(prop.countProperty, allVals.length, graph.getSelectionCells());
+								
+								changedProps.push(prop.countProperty);
+								changedVals.push(allVals.length);
+							}
 						}
+
+						graph.setCellStyles(pName, newVal, graph.getSelectionCells());
+						changedProps.push(pName);
+						changedVals.push(newVal);
+						
+						if (prop.dependentProps != null)
+						{
+							for (var i = 0; i < prop.dependentProps.length; i++)
+							{
+								var defVal = prop.dependentPropsDefVal[i];
+								var vals = prop.dependentPropsVals[i];
+								
+								if (vals.length > newVal)
+								{
+									vals = vals.slice(0, newVal);
+								}
+								else
+								{
+									for (var j = vals.length; j < newVal; j++)
+									{
+										vals.push(defVal);
+									}
+								}
+								
+								vals = vals.join(',');
+								graph.setCellStyles(prop.dependentProps[i], vals, graph.getSelectionCells());
+								changedProps.push(prop.dependentProps[i]);
+								changedVals.push(vals);
+							}
+						}
+						
+						if (typeof(prop.onChange) == 'function')
+						{
+							prop.onChange(graph, newVal);
+						}
+						
+						that.editorUi.fireEvent(new mxEventObject('styleChanged', 'keys', changedProps,
+							'values', changedVals, 'cells', graph.getSelectionCells()));
 					}
-					
-					if (typeof(prop.onChange) == 'function')
+					finally
 					{
-						prop.onChange(graph, newVal);
+						graph.getModel().endUpdate();
 					}
-					
-					that.editorUi.fireEvent(new mxEventObject('styleChanged', 'keys', changedProps,
-						'values', changedVals, 'cells', graph.getSelectionCells()));
-				}
-				finally
-				{
-					graph.getModel().endUpdate();
 				}
 			}
 			
@@ -4835,15 +5191,18 @@
 				clrDiv.style.height = '4px';
 				clrDiv.style.margin = '2px';
 				clrDiv.style.border = '1px solid black';
-				clrDiv.style.background = !pValue || pValue == 'none'? 'url(\'' + Dialog.prototype.noColorImage + '\')' : pValue;
+				clrDiv.style.background = !pValue || pValue == 'none'?
+					'url(\'' + Dialog.prototype.noColorImage + '\')' : pValue;
 
 				btn = mxUtils.button('', mxUtils.bind(that, function(evt)
 				{
 					this.editorUi.pickColor(pValue, function(color)
 					{
-						clrDiv.style.background = color == 'none'? 'url(\'' + Dialog.prototype.noColorImage + '\')' : color;
+						clrDiv.style.background = color == 'none'?
+							'url(\'' + Dialog.prototype.noColorImage + '\')' : color;
 						applyStyleVal(pName, color, prop);
 					});
+					
 					mxEvent.consume(evt);
 				}));
 				
@@ -4860,7 +5219,9 @@
 				if (pValue != null)
 				{
 					var vals = pValue.split(',');
-					secondLevel.push({name: pName, values: vals, type: subType, defVal: defVal, countProperty: countProperty, parentRow: myRow, isDeletable: true, flipBkg: flipBkg});
+					secondLevel.push({name: pName, values: vals, type: subType,
+						defVal: defVal, countProperty: countProperty,
+						parentRow: myRow, isDeletable: true, flipBkg: flipBkg});
 				}
 				
 				btn = mxUtils.button('+', mxUtils.bind(that, function(evt)
@@ -4884,7 +5245,8 @@
 						}
 					}
 					
-					var newProp = {type: subType, parentRow: myRow, index: index, isDeletable: true, defVal: defVal, countProperty: countProperty};
+					var newProp = {type: subType, parentRow: myRow, index: index,
+						isDeletable: true, defVal: defVal, countProperty: countProperty};
 					var arrItem = createPropertyRow(pName, '', newProp, index % 2 == 0, flipBkg);
 					applyStyleVal(pName, defVal, newProp);
 					insertAfter(arrItem, beforeElem);
@@ -4962,6 +5324,7 @@
 				row.appendChild(td);
 				td = document.createElement('td');
 				td.className = 'gePropRowCell';
+				td.setAttribute('title', (pValue != null) ? pValue : mxResources.get('none'));
 				
 				if (pType == 'color')
 				{
@@ -4989,6 +5352,8 @@
 					mxEvent.addListener(td, 'click', mxUtils.bind(that, function()
 					{
 						var select = document.createElement('select');
+						var nullValue = 'null';
+						var nullOption = null;
 						setElementPos(td, select);
 
 						for (var i = 0; i < pEnumList.length; i++)
@@ -4998,15 +5363,28 @@
 							opElem.value = mxUtils.htmlEntities(op.val);
 							mxUtils.write(opElem, mxResources.get(op.dispName, null, op.dispName));
 							select.appendChild(opElem);
+
+							if (op.val == null)
+							{
+								opElem.value = nullValue;
+								nullOption = opElem;
+							}
 						}
 						
-						select.value = pValue;
+						select.value = (pValue == null && nullOption != null) ? nullValue : pValue;
 						
 						div.appendChild(select);
 
 						mxEvent.addListener(select, 'change', function()
 						{
 							var newVal = mxUtils.htmlEntities(select.value);
+
+							if (select[select.selectedIndex] == nullOption ||
+								newVal.value == nullValue)
+							{
+								newVal = null;
+							}
+
 							applyStyleVal(pName, newVal, prop);
 							//set value triggers a redraw of the panel which removes the select and updates the row
 						});
@@ -5033,9 +5411,25 @@
 					var inp = document.createElement('input');
 					inp.setAttribute('readonly', '');
 					inp.value = pValue;
-					inp.style.width = '96px';
 					inp.style.borderWidth = '0px';
-					td.appendChild(inp);
+
+					if (pName == 'id')
+					{
+						inp.style.width = '190px';
+						inp.style.position = 'relative';
+						inp.style.right = '6px';
+						inp.style.float = 'right';
+						inp.style.background = 'none';
+						inp.style.textAlign = 'right';
+						row.firstChild.setAttribute('colspan', '2');
+						inp.setAttribute('title', pValue);
+						row.firstChild.appendChild(inp);
+					}
+					else
+					{
+						inp.style.width = '96px';
+						td.appendChild(inp);
+					}
 				}
 				else
 				{
@@ -5069,11 +5463,13 @@
 						function setInputVal()
 						{
 							var inputVal = input.value;
-							inputVal = inputVal.length == 0 && pType != 'string'? 0 : inputVal;
+							inputVal = inputVal.length == 0 && pType != 'string' &&
+								pType != 'numbers'? 0 : inputVal;
 							
 							if (prop.allowAuto)
 							{
-								if (inputVal.trim != null && inputVal.trim().toLowerCase() == 'auto')
+								if (inputVal.trim != null && inputVal.trim().
+									toLowerCase() == 'auto')
 								{
 									inputVal = 'auto';
 									pType = 'string';
@@ -5094,9 +5490,19 @@
 								inputVal = prop.max;
 							}
 
-							var newVal = encodeURIComponent((pType == 'int'? parseInt(inputVal) : inputVal) + '');
+							var newVal = null;
+
+							try
+							{
+								newVal = (pType == 'numbers') ? inputVal.match(/\d+/g).map(Number).join(' ') :
+									encodeURIComponent((pType == 'int'? parseInt(inputVal) : inputVal) + '');
+							}
+							catch(e)
+							{
+								// ignores parsing errors
+							}
 							
-							applyStyleVal(pName, newVal, prop);
+							applyStyleVal(pName, newVal, prop, null, input);
 						}
 						
 						mxEvent.addListener(input, 'keypress', function(e)
@@ -5222,9 +5628,10 @@
 			}
 			
 			//Add it to top (always)
-			if (cellId != null)
+			if (cellId != null && !hideId)
 			{
-				grid.appendChild(createPropertyRow('id', mxUtils.htmlEntities(cellId), {dispName: 'ID', type: 'readOnly'}, true, false));
+				grid.appendChild(createPropertyRow('id', mxUtils.htmlEntities(cellId),
+					{dispName: 'id', type: 'readOnly'}, true, false));
 			}
 			
 			for (var key in properties)
@@ -5236,8 +5643,8 @@
 					if (!prop.isVisible(state, this)) continue;
 				}
 				
-				var pValue = state.style[key] != null? mxUtils.htmlEntities(state.style[key] + '') :
-					((prop.getDefaultValue != null) ? prop.getDefaultValue(state, this) : prop.defVal); //or undefined if defVal is undefined
+				var pValue = (prop.getValue != null) ? prop.getValue() : (state.style[key] != null? mxUtils.htmlEntities(state.style[key] + '') :
+					((prop.getDefaultValue != null) ? prop.getDefaultValue(state, this) : prop.defVal)); //or undefined if defVal is undefined
 
 				if (prop.type == 'separator')
 				{
@@ -5278,7 +5685,8 @@
 				for (var j = 0; j < prop.values.length; j++)
 				{
 					//mxUtils.clone failed because of the HTM element, so manual cloning is used
-					var iProp = {type: prop.type, parentRow: prop.parentRow, isDeletable: prop.isDeletable, index: j, defVal: prop.defVal, countProperty: prop.countProperty, size: prop.size};
+					var iProp = {type: prop.type, parentRow: prop.parentRow, isDeletable: prop.isDeletable, index: j,
+							defVal: prop.defVal, countProperty: prop.countProperty, size: prop.size};
 					var arrItem = createPropertyRow(prop.name, prop.values[j], iProp, j % 2 == 0, prop.flipBkg);
 					insertAfter(arrItem, insertElem);
 					insertElem = arrItem;
@@ -5529,14 +5937,17 @@
 					
 					picker.innerText = '';
 					
-					for (var i = 0; i < colorsets.length; i++)
+					if (colorsets != null)
 					{
-						if (i > 0 && mxUtils.mod(i, 4) == 0)
+						for (var i = 0; i < colorsets.length; i++)
 						{
-							mxUtils.br(picker);
+							if (i > 0 && mxUtils.mod(i, 4) == 0)
+							{
+								mxUtils.br(picker);
+							}
+							
+							addButton(colorsets[i]);
 						}
-						
-						addButton(colorsets[i]);
 					}
 				});
 
@@ -5615,18 +6026,14 @@
 	 * Lookup table for mapping from font URL and name to elements in the DOM.
 	 */
 	Graph.customFontElements = {};
-		
-	/**
-	 * Lookup table for recent custom fonts.
-	 */
-	Graph.recentCustomFonts = {};
 
 	/**
 	 * Returns true if the given font URL references a Google font.
 	 */
 	Graph.isGoogleFontUrl = function(url)
 	{
-		return url.substring(0, Editor.GOOGLE_FONTS.length) == Editor.GOOGLE_FONTS;
+		return url.substring(0, Editor.GOOGLE_FONTS.length) == Editor.GOOGLE_FONTS ||
+			url.substring(0, Editor.GOOGLE_FONTS_CSS2.length) == Editor.GOOGLE_FONTS_CSS2;
 	};
 
 	/**
@@ -5635,6 +6042,21 @@
 	Graph.isCssFontUrl = function(url)
 	{
 		return Graph.isGoogleFontUrl(url);
+	};
+
+	/**
+	 * Uses CSS2 for Google fonts to support bold font style eg.
+	 * https://fonts.googleapis.com/css?family=IBM+Plex+Sans is rewritten as
+	 * https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500
+	 */
+	Graph.rewriteGoogleFontUrl = function(url)
+	{
+		if (url != null && url.substring(0, Editor.GOOGLE_FONTS.length) == Editor.GOOGLE_FONTS)
+		{
+			url = Editor.GOOGLE_FONTS_CSS2 + url.substring(Editor.GOOGLE_FONTS.length) + ':wght@400;500';
+		}
+
+		return url;
 	};
 
 	/**
@@ -5651,7 +6073,7 @@
 			elt.setAttribute('rel', 'stylesheet');
 			elt.setAttribute('type', 'text/css');
 			elt.setAttribute('charset', 'UTF-8');
-			elt.setAttribute('href', url);
+			elt.setAttribute('href', Graph.rewriteGoogleFontUrl(url));
 		}
 		else
 		{
@@ -5668,7 +6090,15 @@
 		
 		return elt;
 	};
-	
+		
+	/**
+	 * Adds an entry to the recent custom fonts list.
+	 */
+	Graph.addRecentCustomFont = function(key, entry)
+	{
+		// Hook for registering recent custom fonts in the UI
+	};
+
 	/**
 	 * Adds a font to the document.
 	 */
@@ -5678,7 +6108,7 @@
 		{
 			var key = name.toLowerCase();
 			
-			// Blocks UI font from being overwritten
+			// Blocks UI fonts from being overwritten
 			if (key != 'helvetica' && name != 'arial' && key != 'sans-serif')
 			{
 				var entry = Graph.customFontElements[key];
@@ -5702,7 +6132,6 @@
 
 					entry = {name: name, url: url, elt: Graph.createFontElement(name, realUrl)};
 					Graph.customFontElements[key] = entry;
-					Graph.recentCustomFonts[key] = entry;
 					var head = document.getElementsByTagName('head')[0];
 					
 					if (callback != null)
@@ -5797,7 +6226,14 @@
 				
 				if (name != null)
 				{
-					Graph.addFont(name, decodeURIComponent(url));
+					try
+					{
+						Graph.addFont(name, decodeURIComponent(url));
+					}
+					catch (e)
+					{
+						// ignore
+					}
 				}
 			}
 		}
@@ -5973,7 +6409,7 @@
 	 * Handles custom fonts in labels.
 	 */
 	var mxSvgCanvas2DUpdateTextNodes = mxSvgCanvas2D.prototype.updateTextNodes;
-	mxSvgCanvas2D.prototype.updateTextNodes = function(x, y, w, h, align, valign, wrap, overflow, clip, rotation, g)
+	mxSvgCanvas2D.prototype.updateTextNodes = function(x, y, w, h, align, valign, wrap, overflow, clip, rotation, dir, g)
 	{
 		mxSvgCanvas2DUpdateTextNodes.apply(this, arguments);
 		Graph.processFontAttributes(g);
@@ -6416,31 +6852,44 @@
 	{
 		// Adds the font element to the document
 		Graph.addFont(name, url);
-		
-		// Only valid known fonts are allowed as parameters so we set
-		// the real font name and the data-source-face in the element
-		// which is used as the face attribute when editing stops
-		// KNOWN: Undo for the DOM change is not working
-		document.execCommand('fontname', false, name);
 
-		// Finds element with new font name and checks its data-font-src attribute
-		if (url != null)
+		// Marks the element with a random font name so
+		// that it can be found in the code below
+		var temp = Editor.guid();
+		document.execCommand('fontname', false, temp);
+
+		// Finds the new or updated element and changes or
+		// removes is data-font-src attribute as required
+		var fonts = this.cellEditor.textarea.getElementsByTagName('font');
+		var elt = null;
+
+		for (var i = 0; i < fonts.length; i++)
 		{
-			var fonts = this.cellEditor.textarea.getElementsByTagName('font');
-			
-			// Enforces consistent font naming
-			url = Graph.getFontUrl(name, url);
-			
-			for (var i = 0; i < fonts.length; i++)
+			if (fonts[i].getAttribute('face') == temp)
 			{
-				if (fonts[i].getAttribute('face') == name)
-				{
-					if (fonts[i].getAttribute('data-font-src') != url)
-					{
-						fonts[i].setAttribute('data-font-src', url);
-					}
-				}
+				elt = fonts[i];
+				break;
 			}
+		}
+
+		if (elt != null)
+		{
+			fonts[i].setAttribute('face', name);
+
+			if (url != null)
+			{
+				fonts[i].setAttribute('data-font-src', url);
+			}
+			else
+			{
+				fonts[i].removeAttribute('data-font-src');
+			}
+		}
+		else
+		{
+			// Fallback to use the real font name if a new
+			// or updated element can not be found above
+			document.execCommand('fontname', false, name);
 		}
 	};
 	
@@ -6593,7 +7042,7 @@
 	
 	Graph.prototype.getSvg = function(background, scale, border, nocrop, crisp,
 		ignoreSelection, showText, imgExport, linkTarget, hasShadow,
-		incExtFonts, theme, exportType, cells, noCssClass)
+		incExtFonts, theme, exportType, cells, noCssClass, disableLinks)
 	{
 		var temp = null;
 		var tempFg = null;
@@ -6633,7 +7082,7 @@
 				result.setAttribute('class', cssClass);
 			}
 
-			var style = Graph.createSvgDarkModeStyle(result.ownerDocument, theme, cssClass);
+			var style = Graph.createSvgDarkModeStyle(result.ownerDocument, theme, cssClass, background);
 			result.getElementsByTagName('defs')[0].appendChild(style);
 		}
 		
@@ -6656,7 +7105,7 @@
 				
 				if (Graph.isCssFontUrl(fontUrl))
 				{
-					prefix += '@import url(' + fontUrl + ');\n';
+					prefix += '@import url(' + Graph.rewriteGoogleFontUrl(fontUrl) + ');\n';
 				}
 				else
 				{
@@ -6668,6 +7117,13 @@
 			
 			style.appendChild(svgDoc.createTextNode(prefix + postfix));
 			result.getElementsByTagName('defs')[0].appendChild(style);
+		}
+
+		// Converts background pages to subtrees
+		if (Editor.replaceSvgDataUris && bgImg != null &&
+			bgImg.originalSrc != null)
+		{
+			EditorUi.embedSvgImages(result);
 		}
 
 		// SVG element must be added to DOM for MathJax to work
@@ -6811,53 +7267,13 @@
 	};
 
 	/**
-	 * Adds workaround for math rendering in Chrome.
-	 * 
-	 * Workaround for https://bugs.webkit.org/show_bug.cgi?id=93358 in WebKit
-	 * 
-	 * Adding an absolute position DIV before the SVG seems to mitigate the problem.
-	 */
-	var graphViewValidateBackgroundPage = mxGraphView.prototype.validateBackgroundPage;
-	
-	mxGraphView.prototype.validateBackgroundPage = function()
-	{
-		graphViewValidateBackgroundPage.apply(this, arguments);
-		
-		if (mxClient.IS_GC && this.getDrawPane() != null)
-		{
-			var g = this.getDrawPane().parentNode;
-			
-			if (this.graph.mathEnabled && !mxClient.NO_FO &&
-				(this.webKitForceRepaintNode == null ||
-				this.webKitForceRepaintNode.parentNode == null) &&
-				this.graph.container.firstChild.nodeName == 'svg')
-			{
-				this.webKitForceRepaintNode = document.createElement('div');
-				this.webKitForceRepaintNode.style.cssText = 'position:absolute;';
-				g.ownerSVGElement.parentNode.insertBefore(this.webKitForceRepaintNode, g.ownerSVGElement);
-			}
-			else if (this.webKitForceRepaintNode != null && (!this.graph.mathEnabled ||
-					(this.graph.container.firstChild.nodeName != 'svg' &&
-					this.graph.container.firstChild != this.webKitForceRepaintNode)))
-			{
-				if (this.webKitForceRepaintNode.parentNode != null)
-				{
-					this.webKitForceRepaintNode.parentNode.removeChild(this.webKitForceRepaintNode);
-				}
-				
-				this.webKitForceRepaintNode = null;
-			}
-		}
-	};
-
-	/**
 	 * Updates the SVG for the background image if it references another page.
 	 */
 	var graphRefresh = Graph.prototype.refresh;
 	Graph.prototype.refresh = function()
 	{
-		graphRefresh.apply(this, arguments);
 		this.refreshBackgroundImage();
+		graphRefresh.apply(this, arguments);
 	};
 				 
 	/**
@@ -7124,6 +7540,11 @@
 
 						if (action.tags.hidden != null)
 						{
+							if (hidden == null)
+							{
+								hidden = [];
+							}
+							
 							hidden = hidden.concat(action.tags.hidden);
 						}
 
@@ -7926,6 +8347,19 @@
 	/**
 	 * Selects first unlocked layer if one exists
 	 */
+	Graph.prototype.checkDefaultParent = function()
+	{
+		if (this.defaultParent != null &&
+			!this.model.contains(this.defaultParent))
+		{
+			this.setDefaultParent(null);
+			this.selectUnlockedLayer();
+		}
+	};
+	
+	/**
+	 * Selects first unlocked layer if one exists
+	 */
 	Graph.prototype.selectUnlockedLayer = function()
 	{
 		if (this.defaultParent == null)
@@ -7968,7 +8402,7 @@
 	mxStencilRegistry.libraries['cisco_safe'] = [SHAPES_PATH + '/mxCiscoSafe.js', STENCIL_PATH + '/cisco_safe/architecture.xml', STENCIL_PATH + '/cisco_safe/business_icons.xml', STENCIL_PATH + '/cisco_safe/capability.xml', STENCIL_PATH + '/cisco_safe/design.xml', STENCIL_PATH + '/cisco_safe/iot_things_icons.xml', STENCIL_PATH + '/cisco_safe/people_places_things_icons.xml', STENCIL_PATH + '/cisco_safe/security_icons.xml', STENCIL_PATH + '/cisco_safe/technology_icons.xml', STENCIL_PATH + '/cisco_safe/threat.xml'];
 	mxStencilRegistry.libraries['dfd'] = [SHAPES_PATH + '/mxDFD.js'];
 	mxStencilRegistry.libraries['er'] = [SHAPES_PATH + '/er/mxER.js'];
-	mxStencilRegistry.libraries['kubernetes'] = [SHAPES_PATH + '/mxKubernetes.js', STENCIL_PATH + '/kubernetes.xml'];
+	mxStencilRegistry.libraries['kubernetes'] = [SHAPES_PATH + '/mxKubernetes.js', STENCIL_PATH + '/kubernetes.xml', STENCIL_PATH + '/kubernetes2.xml'];
 	mxStencilRegistry.libraries['flowchart'] = [SHAPES_PATH + '/mxFlowchart.js', STENCIL_PATH + '/flowchart.xml'];
 	mxStencilRegistry.libraries['ios'] = [SHAPES_PATH + '/mockup/mxMockupiOS.js'];
 	mxStencilRegistry.libraries['rackGeneral'] = [SHAPES_PATH + '/rack/mxRack.js', STENCIL_PATH + '/rack/general.xml'];
@@ -8014,7 +8448,9 @@
 	mxStencilRegistry.libraries['pid2misc'] = [SHAPES_PATH + '/pid2/mxPidMisc.js', STENCIL_PATH + '/pid/misc.xml'];
 	mxStencilRegistry.libraries['pid2valves'] = [SHAPES_PATH + '/pid2/mxPidValves.js'];
 	mxStencilRegistry.libraries['pidFlowSensors'] = [STENCIL_PATH + '/pid/flow_sensors.xml'];
-	mxStencilRegistry.libraries['salesforce'] = [SHAPES_PATH + '/mxSalesforce.js', STENCIL_PATH + '/salesforce.xml'];
+	mxStencilRegistry.libraries['salesforce'] = [STENCIL_PATH + '/salesforce.xml'];
+	mxStencilRegistry.libraries['sap'] = [SHAPES_PATH + '/mxSAP.js', STENCIL_PATH + '/sap.xml'];
+	mxStencilRegistry.libraries['emoji'] = [SHAPES_PATH + '/emoji/mxEmoji.js'];
 
 	// Triggers dynamic loading for markers
 	mxMarker.getPackageForType = function(type)
@@ -8077,7 +8513,7 @@
 	/**
 	 * Constructs a new print dialog.
 	 */
-	PrintDialog.prototype.create = function(editorUi, titleText)
+	PrintDialog.prototype.create = function(editorUi, titleText, fn)
 	{
 		var graph = editorUi.editor.graph;
 		var div = document.createElement('div');
@@ -8088,44 +8524,50 @@
 		title.style.marginTop = '0px';
 		mxUtils.write(title, titleText || mxResources.get('print'));
 		div.appendChild(title);
-		
-		var pageCount = 1;
+
 		var currentPage = 1;
+		var pageCount = 1;
 
 		// Pages
 		var pagesSection = document.createElement('div');
-		pagesSection.style.cssText = 'border-bottom:1px solid lightGray;padding-bottom:12px;margin-bottom:12px;';
+		pagesSection.style.whiteSpace = 'nowrap';
 		
 		var allPagesRadio = document.createElement('input');
-		allPagesRadio.style.cssText = 'margin-right:8px;margin-bottom:8px;';
-		allPagesRadio.setAttribute('value', 'all');
+		allPagesRadio.style.marginRight = '8px';
+		allPagesRadio.style.marginBottom = '8px';
 		allPagesRadio.setAttribute('type', 'radio');
 		allPagesRadio.setAttribute('name', 'pages-printdialog');
 		
 		pagesSection.appendChild(allPagesRadio);
 
 		var span = document.createElement('span');
-		mxUtils.write(span, mxResources.get('printAllPages'));
+		mxUtils.write(span, mxResources.get('allPages'));
+		mxEvent.addListener(span, 'click', function()
+		{
+			allPagesRadio.checked = true;
+		});
 		pagesSection.appendChild(span);
 
 		mxUtils.br(pagesSection);
 
 		// Page range
 		var pagesRadio = allPagesRadio.cloneNode(true);
-		allPagesRadio.setAttribute('checked', 'checked');
-		pagesRadio.setAttribute('value', 'range');
 		pagesSection.appendChild(pagesRadio);
 		
 		var span = document.createElement('span');
 		mxUtils.write(span, mxResources.get('pages') + ':');
 		pagesSection.appendChild(span);
+		mxEvent.addListener(span, 'click', function()
+		{
+			pagesRadio.checked = true;
+		});
 		
 		var pagesFromInput = document.createElement('input');
-		pagesFromInput.style.cssText = 'margin:0 8px 0 8px;'
+		pagesFromInput.style.margin = '0 4px';
 		pagesFromInput.setAttribute('value', '1');
 		pagesFromInput.setAttribute('type', 'number');
 		pagesFromInput.setAttribute('min', '1');
-		pagesFromInput.style.width = '50px';
+		pagesFromInput.style.width = '40px';
 		pagesSection.appendChild(pagesFromInput);
 		
 		var span = document.createElement('span');
@@ -8147,8 +8589,10 @@
 		
 		function validatePageRange()
 		{
-			pagesToInput.value = Math.max(1, Math.min(pageCount, Math.max(parseInt(pagesToInput.value), parseInt(pagesFromInput.value))));
-			pagesFromInput.value = Math.max(1, Math.min(pageCount, Math.min(parseInt(pagesToInput.value), parseInt(pagesFromInput.value))));
+			pagesToInput.value = Math.max(1, Math.min(pageCount,
+				Math.max(parseInt(pagesToInput.value), parseInt(pagesFromInput.value))));
+			pagesFromInput.value = Math.max(1, Math.min(pageCount,
+				Math.min(parseInt(pagesToInput.value), parseInt(pagesFromInput.value))));
 		};
 		
 		mxEvent.addListener(pagesFromInput, 'change', validatePageRange);
@@ -8160,38 +8604,65 @@
 
 			if (editorUi.currentPage != null)
 			{
-				for (var i = 0; i < editorUi.pages.length; i++)
+				for (var i = 0; i < pageCount; i++)
 				{
 					if (editorUi.currentPage == editorUi.pages[i])
 					{
 						currentPage = i + 1;
-						pagesFromInput.value = currentPage;
-						pagesToInput.value = currentPage;
 						break;
 					}
 				}
 			}
 		}
 		
+		if (editorUi.lastPrintPagesFromInput != null &&
+			editorUi.lastPrintPagesToInput != null)
+		{
+			pagesFromInput.value = Math.min(pageCount,
+				Math.max(1, editorUi.lastPrintPagesFromInput));
+			pagesToInput.value = Math.min(pageCount,
+				Math.max(1, editorUi.lastPrintPagesToInput));
+		}
+		else
+		{
+			pagesFromInput.value = currentPage;
+			pagesToInput.value = currentPage;
+		}
+		
 		pagesFromInput.setAttribute('max', pageCount);
 		pagesToInput.setAttribute('max', pageCount);
-		
-		if (!editorUi.isPagesEnabled())
+
+		var currPage = mxUtils.button(mxResources.get('currentPage'), function(evt)
 		{
+			pagesFromInput.value = currentPage;
+			pagesToInput.value = currentPage;
 			pagesRadio.checked = true;
-		}
-		else if (pageCount > 1)
+		});
+
+		currPage.setAttribute('title', mxResources.get('currentPage'));
+		currPage.style.marginLeft = '4px';
+		currPage.style.maxWidth = '100px';
+		currPage.style.overflow = 'hidden';
+		currPage.style.textOverflow = 'ellipsis';
+		currPage.style.whiteSpace = 'nowrap';
+
+		pagesSection.appendChild(currPage);
+		
+		if (pageCount > 1)
 		{
 			div.appendChild(pagesSection);
-			pagesRadio.checked = true;
 		}
-
-		mxUtils.br(pagesSection);
 		
 		// Selection only
+		var selectionSection = document.createElement('div');
+		selectionSection.style.borderBottom = '1px solid lightGray';
+		selectionSection.style.paddingBottom = '12px';
+		selectionSection.style.marginBottom = '12px';
+		selectionSection.style.whiteSpace = 'nowrap';
+
 		var selectionOnlyRadio = document.createElement('input');
-		selectionOnlyRadio.setAttribute('value', 'all');
-		selectionOnlyRadio.setAttribute('type', 'radio');
+		selectionOnlyRadio.setAttribute('name', 'pages-printdialog');
+		selectionOnlyRadio.setAttribute('type', (pageCount == 1) ? 'checkbox' : 'radio');
 		selectionOnlyRadio.style.marginRight = '8px';
 		
 		if (graph.isSelectionEmpty())
@@ -8199,72 +8670,103 @@
 			selectionOnlyRadio.setAttribute('disabled', 'disabled');
 		}
 
-		// Adjust to ...
-		var adjustSection = document.createElement('div');
-		adjustSection.style.marginBottom = '10px';
-
-		if (pageCount == 1)
+		if (graph.isEnabled())
 		{
-			selectionOnlyRadio.setAttribute('type', 'checkbox');
-			selectionOnlyRadio.style.marginBottom = '12px';
-			adjustSection.appendChild(selectionOnlyRadio);
+			selectionSection.appendChild(selectionOnlyRadio);
+		
+			var span = document.createElement('span');
+			mxUtils.write(span, mxResources.get('selectionOnly'));
+			selectionSection.appendChild(span);
+		}
+
+		if (graph.isEnabled() || pageCount > 1)
+		{
+			div.appendChild(selectionSection);
+		}
+
+		if (!editorUi.isPagesEnabled() || editorUi.lastPrintPagesRadioChecked)
+		{
+			pagesRadio.checked = true;
+		}
+		else if (!graph.isSelectionEmpty() && editorUi.lastPrintSelectionOnlyChecked)
+		{
+			selectionOnlyRadio.checked = true;
 		}
 		else
 		{
-
-			selectionOnlyRadio.setAttribute('name', 'pages-printdialog');
-			selectionOnlyRadio.style.marginBottom = '8px';
-			pagesSection.appendChild(selectionOnlyRadio);
-		}
-		
-		var span = document.createElement('span');
-		mxUtils.write(span, mxResources.get('selectionOnly'));
-		selectionOnlyRadio.parentNode.appendChild(span);
-
-		if (pageCount == 1)
-		{
-			mxUtils.br(selectionOnlyRadio.parentNode);
+			allPagesRadio.checked = true;
 		}
 
-		var adjustRadio = document.createElement('input');
-		adjustRadio.style.marginRight = '8px';
+		if (!graph.isSelectionEmpty())
+		{
+			mxEvent.addListener(span, 'click', function()
+			{
+				selectionOnlyRadio.checked = !selectionOnlyRadio.checked;
+			});
+		}
 		
-		adjustRadio.setAttribute('value', 'adjust');
-		adjustRadio.setAttribute('type', 'radio');
-		adjustRadio.setAttribute('name', 'printZoom');
-		adjustSection.appendChild(adjustRadio);
+		// Page view
+		var pageViewSection = document.createElement('div');
+		pageViewSection.style.whiteSpace = 'nowrap';
+
+		var pageViewRadio = document.createElement('input');
+		pageViewRadio.style.marginBottom = '8px';
+		pageViewRadio.style.marginRight = '8px';
+		pageViewRadio.setAttribute('type', 'radio');
+		pageViewRadio.setAttribute('name', 'printSize');
+		pageViewSection.appendChild(pageViewRadio);
 
 		var span = document.createElement('span');
-		mxUtils.write(span, mxResources.get('adjustTo'));
-		adjustSection.appendChild(span);
-		
-		var zoomInput = document.createElement('input');
-		zoomInput.style.cssText = 'margin:0 8px 0 8px;';
-		zoomInput.setAttribute('value', '100 %');
-		zoomInput.style.width = '50px';
-		adjustSection.appendChild(zoomInput);
-		
-		mxEvent.addListener(zoomInput, 'focus', function()
+		mxUtils.write(span, mxResources.get('pageView'));
+		pageViewSection.appendChild(span);
+		mxEvent.addListener(pageViewSection, 'click', function()
 		{
-			adjustRadio.checked = true;
+			pageViewRadio.checked = true;
 		});
+
+		div.appendChild(pageViewSection);
 		
-		div.appendChild(adjustSection);
+		// Crop
+		var cropSection = document.createElement('div');
+		cropSection.style.whiteSpace = 'nowrap';
+
+		var cropRadio = document.createElement('input');
+		cropRadio.style.marginBottom = '8px';
+		cropRadio.style.marginRight = '8px';
+		cropRadio.setAttribute('type', 'radio');
+		cropRadio.setAttribute('name', 'printSize');
+		cropSection.appendChild(cropRadio);
+
+		var span = document.createElement('span');
+		mxUtils.write(span, mxResources.get('crop'));
+		cropSection.appendChild(span);
+		mxEvent.addListener(cropSection, 'click', function()
+		{
+			cropRadio.checked = true;
+		});
+
+		div.appendChild(cropSection);
 
 		// Fit to ...
-		var fitSection = pagesSection.cloneNode(false);
+		var fitSection = document.createElement('div');
+		fitSection.style.whiteSpace = 'nowrap';
 
-		var fitRadio = adjustRadio.cloneNode(true);
-		fitRadio.setAttribute('value', 'fit');
-		adjustRadio.setAttribute('checked', 'checked');
+		var fitRadio = document.createElement('input');
+		fitRadio.style.marginBottom = '8px';
+		fitRadio.style.marginRight = '8px';
+		fitRadio.setAttribute('type', 'radio');
+		fitRadio.setAttribute('name', 'printSize');
 		
 		var spanFitRadio = document.createElement('div');
-		spanFitRadio.style.cssText = 'display:inline-block;vertical-align:top;padding-top:2px;';
+		spanFitRadio.style.display = 'inline-block';
+		spanFitRadio.style.verticalAlign = 'top';
+		spanFitRadio.style.paddingTop = '2px';
 		spanFitRadio.appendChild(fitRadio);
 		fitSection.appendChild(spanFitRadio);
 		
 		var table = document.createElement('table');
 		table.style.display = 'inline-block';
+		table.style.borderSpacing = '0';
 		var tbody = document.createElement('tbody');
 		
 		var row1 = document.createElement('tr');
@@ -8282,10 +8784,18 @@
 		td4.style.textAlign = 'right';
 
 		mxUtils.write(td1, mxResources.get('fitTo'));
+		mxEvent.addListener(fitSection, 'click', function(e)
+		{
+			if (mxEvent.getSource(e) != fitRadio)
+			{
+				fitRadio.checked = !fitRadio.checked;
+			}
+		});
 		
 		var sheetsAcrossInput = document.createElement('input');
-		sheetsAcrossInput.style.cssText = 'margin:0 8px 0 8px;';
-		sheetsAcrossInput.setAttribute('value', '1');
+		sheetsAcrossInput.style.margin = '0 2px';
+		sheetsAcrossInput.style.boxSizing = 'border-box';
+		sheetsAcrossInput.setAttribute('value', editorUi.lastPrintSheetsAcross || '1');
 		sheetsAcrossInput.setAttribute('min', '1');
 		sheetsAcrossInput.setAttribute('type', 'number');
 		sheetsAcrossInput.style.width = '40px';
@@ -8298,17 +8808,33 @@
 		mxUtils.write(td4, mxResources.get('fitToBy'));
 		
 		var sheetsDownInput = sheetsAcrossInput.cloneNode(true);
+		sheetsDownInput.setAttribute('value', editorUi.lastPrintSheetsDown || '1');
 		td5.appendChild(sheetsDownInput);
 		
-		mxEvent.addListener(sheetsAcrossInput, 'focus', function()
+		mxEvent.addListener(sheetsAcrossInput, 'click', function(e)
 		{
 			fitRadio.checked = true;
+			mxEvent.consume(e);
 		});
 
-		mxEvent.addListener(sheetsDownInput, 'focus', function()
+		mxEvent.addListener(sheetsDownInput, 'click', function(e)
 		{
 			fitRadio.checked = true;
+			mxEvent.consume(e);
 		});
+
+		if (editorUi.lastPrintCropRadioChecked)
+		{
+			cropRadio.checked = true;
+		}
+		else if (editorUi.lastPrintFitRadioChecked)
+		{
+			fitRadio.checked = true;
+		}
+		else
+		{
+			pageViewRadio.checked = true;
+		}
 
 		var span = document.createElement('span');
 		mxUtils.write(span, mxResources.get('fitToSheetsDown'));
@@ -8328,520 +8854,174 @@
 		fitSection.appendChild(table);
 		
 		div.appendChild(fitSection);
-		
-		// Page scale ...
-		var pageScaleSection = document.createElement('div');
 
-		var span = document.createElement('div');
-		span.style.fontWeight = 'bold';
-		span.style.marginBottom = '12px';
-		mxUtils.write(span, mxResources.get('paperSize'));
-		pageScaleSection.appendChild(span);
+		// Border and zoom
+		var optionsSection = document.createElement('div');
+		optionsSection.style.borderTop = '1px solid lightGray';
+		optionsSection.style.whiteSpace = 'nowrap';
+		optionsSection.style.paddingTop = '12px';
+		optionsSection.style.marginTop = '12px';
+		optionsSection.style.paddingLeft = '8px';
 		
-		var span = document.createElement('div');
-		span.style.marginBottom = '12px';
+		mxUtils.write(optionsSection, mxResources.get('borderWidth') + ':');
+		var borderInput = document.createElement('input');
+		borderInput.setAttribute('type', 'number');
+		borderInput.setAttribute('min', '0');
+		borderInput.style.width = '40px';
+		borderInput.style.marginLeft = '4px';
+		borderInput.value = (editorUi.lastPrintBorder != null) ?
+			editorUi.lastPrintBorder : mxPrintPreview.prototype.pageMargin;
+		optionsSection.appendChild(borderInput);
 
-		var accessor = PageSetupDialog.addPageFormatPanel(span, 'printdialog',
-			editorUi.editor.graph.pageFormat || mxConstants.PAGE_FORMAT_A4_PORTRAIT);
-		pageScaleSection.appendChild(span);
-		
 		var span = document.createElement('span');
-		mxUtils.write(span, mxResources.get('pageScale'));
-		pageScaleSection.appendChild(span);
+		span.style.marginLeft = '8px';
+		mxUtils.write(span, mxResources.get('zoom') + ':');
+		optionsSection.appendChild(span);
 		
-		var pageScaleInput = document.createElement('input');
-		pageScaleInput.style.cssText = 'margin:0 8px 0 8px;';
-		pageScaleInput.setAttribute('value', '100 %');
-		pageScaleInput.style.width = '60px';
-		pageScaleSection.appendChild(pageScaleInput);
-		
-		div.appendChild(pageScaleSection);
-		
+		var zoomInput = document.createElement('input');
+		zoomInput.style.width = '60px';
+		zoomInput.style.marginLeft = '4px';
+		zoomInput.value = (editorUi.lastPrintZoom != null) ?
+			editorUi.lastPrintZoom : '100%';
+		optionsSection.appendChild(zoomInput);
+
+		mxUtils.br(optionsSection);
+
+		// Grid
+		var gridInput = document.createElement('input');
+		gridInput.setAttribute('type', 'checkbox');
+		gridInput.style.marginTop = '12px';
+		gridInput.checked = (editorUi.lastPrintGrid != null) ?
+			editorUi.lastPrintGrid : false;
+		optionsSection.appendChild(gridInput);
+
+		var span = document.createElement('span');
+		span.style.marginLeft = '4px';
+		span.style.marginRight = '8px';
+		mxUtils.write(span, mxResources.get('grid'));
+		optionsSection.appendChild(span);
+
+		mxEvent.addListener(span, 'click', function(e)
+		{
+			gridInput.checked = true;
+			mxEvent.consume(e);
+		});
+
+		// Transparent background
+		var transparentInput = document.createElement('input');
+		transparentInput.setAttribute('type', 'checkbox');
+		transparentInput.style.marginTop = '10px';
+		transparentInput.checked = (editorUi.lastPrintTransparent != null) ?
+			editorUi.lastPrintTransparent : false;
+
+		// Export
+		if (fn != null)
+		{
+			optionsSection.appendChild(transparentInput);
+
+			var span = document.createElement('span');
+			span.style.marginLeft = '4px';
+			mxUtils.write(span, mxResources.get('transparentBackground'));
+			optionsSection.appendChild(span);
+
+			mxEvent.addListener(span, 'click', function(e)
+			{
+				transparentInput.checked = true;
+				mxEvent.consume(e);
+			});
+		}
+
+		// Include diagram
+		var includeInput = document.createElement('input');
+		includeInput.setAttribute('type', 'checkbox');
+		includeInput.style.marginTop = '10px';
+		includeInput.checked = (editorUi.lastPrintInclude != null) ?
+			editorUi.lastPrintInclude : Editor.defaultIncludeDiagram;
+
+		if (fn != null && !mxClient.IS_CHROMEAPP &&
+			editorUi.getServiceName() == 'draw.io')
+		{
+			mxUtils.br(optionsSection);
+			optionsSection.appendChild(includeInput);
+
+			var span = document.createElement('span');
+			span.style.marginLeft = '4px';
+			mxUtils.write(span, mxResources.get('includeCopyOfMyDiagram'));
+			optionsSection.appendChild(span);
+
+			mxEvent.addListener(span, 'click', function(e)
+			{
+				includeInput.checked = true;
+				mxEvent.consume(e);
+			});
+		}
+
+
+		div.appendChild(optionsSection);
+
 		// Buttons
 		var buttons = document.createElement('div');
-		buttons.style.cssText = 'text-align:right;margin:48px 0 0 0;';
+		buttons.style.marginTop = '40px';
+		buttons.style.textAlign = 'right';
+		buttons.style.whiteSpace = 'nowrap';
 		
-		// Overall scale for print-out to account for print borders in dialogs etc
+		// Preview or print
 		function preview(print)
 		{
-			var printScale = parseInt(pageScaleInput.value) / 100;
-			
-			if (isNaN(printScale))
+			editorUi.lastPrintPagesRadioChecked = pagesRadio.checked;
+			editorUi.lastPrintSelectionOnlyChecked = selectionOnlyRadio.checked;
+			editorUi.lastPrintCropRadioChecked = cropRadio.checked;
+			editorUi.lastPrintFitRadioChecked = fitRadio.checked;
+
+			if (pagesRadio.checked && pagesFromInput.value < pagesToInput.value)
 			{
-				printScale = 1;
-				pageScaleInput.value = '100 %';
-			}
-			
-			// Workaround for better output in Safari
-			if (mxClient.IS_SF)
-			{
-				printScale *= 0.75;
-			}
-			
-			// Disables dark mode while printing
-			var darkStylesheet = null;
-			var darkFg = graph.shapeForegroundColor;
-			var darkBg = graph.shapeBackgroundColor;
-
-			if (graph.themes != null && graph.defaultThemeName == 'darkTheme')
-			{
-				darkStylesheet = graph.stylesheet;
-				graph.stylesheet = graph.getDefaultStylesheet()
-				graph.shapeForegroundColor = '#000000';
-				graph.shapeBackgroundColor = '#ffffff';
-				graph.refresh();
-			}
-
-			function printGraph(thisGraph, pv, forcePageBreaks, pageId)
-			{
-				// Workaround for CSS transforms affecting the print output
-				// is to disable during print output and restore after
-				var prev = thisGraph.useCssTransforms;
-				var prevTranslate = thisGraph.currentTranslate;
-				var prevScale = thisGraph.currentScale;
-				var prevViewTranslate = thisGraph.view.translate;
-				var prevViewScale = thisGraph.view.scale;
-
-				if (thisGraph.useCssTransforms)
-				{
-					thisGraph.useCssTransforms = false;
-					thisGraph.currentTranslate = new mxPoint(0,0);
-					thisGraph.currentScale = 1;
-					thisGraph.view.translate = new mxPoint(0,0);
-					thisGraph.view.scale = 1;
-				}
-
-				// Negative coordinates are cropped or shifted if page visible
-				var gb = thisGraph.getGraphBounds();
-				var border = 0;
-				var x0 = 0;
-				var y0 = 0;
-		
-				var pf = accessor.get();
-				var scale = 1 / thisGraph.pageScale;
-				var autoOrigin = fitRadio.checked;
-		
-				if (autoOrigin)
-				{
-					var h = parseInt(sheetsAcrossInput.value);
-					var v = parseInt(sheetsDownInput.value);
-					
-					scale = Math.min((pf.height * v) / (gb.height / thisGraph.view.scale),
-						(pf.width * h) / (gb.width / thisGraph.view.scale));
-				}
-				else
-				{
-					scale = parseInt(zoomInput.value) / (100 * thisGraph.pageScale);
-					
-					if (isNaN(scale))
-					{
-						printScale = 1 / thisGraph.pageScale;
-						zoomInput.value = '100 %';
-					}
-				}
-		
-				// Applies print scale
-				pf = mxRectangle.fromRectangle(pf);
-				pf.width = Math.ceil(pf.width * printScale);
-				pf.height = Math.ceil(pf.height * printScale);
-				scale *= printScale;
-				
-				// Starts at first visible page
-				if (!autoOrigin && thisGraph.pageVisible)
-				{
-					var layout = thisGraph.getPageLayout();
-					x0 -= layout.x * pf.width;
-					y0 -= layout.y * pf.height;
-				}
-				else
-				{
-					autoOrigin = true;
-				}
-
-				var anchorId = (pageId != null) ? 'page/id,' + pageId : null;
-				
-				if (pv == null)
-				{
-					pv = PrintDialog.createPrintPreview(thisGraph, scale, pf, border, x0, y0, autoOrigin);
-					pv.pageSelector = false;
-					pv.mathEnabled = false;
-
-					if (selectionOnlyRadio.checked)
-					{
-						pv.isCellVisible = function(cell)
-						{
-							return thisGraph.isCellSelected(cell);
-						};
-					}
-					
-					var file = editorUi.getCurrentFile();
-					
-					if (file != null)
-					{
-						pv.title = file.getTitle();
-					}
-					
-					var writeHead = pv.writeHead;
-					
-					// Overridden to add custom fonts
-					pv.writeHead = function(doc)
-					{
-						writeHead.apply(this, arguments);
-						
-						// Fixes bold math when exported to PDF
-						if (mxClient.IS_GC)
-						{
-							doc.writeln('<style type="text/css">');
-							doc.writeln('@media print {');
-							doc.writeln('.MathJax svg { shape-rendering: crispEdges; }');
-							doc.writeln('}');
-							doc.writeln('</style>');
-						}
-
-						if (editorUi.editor.fontCss != null)
-						{
-							doc.writeln('<style type="text/css">');
-							doc.writeln(editorUi.editor.fontCss);
-							doc.writeln('</style>');
-						}
-						
-						var extFonts = thisGraph.getCustomFonts();
-						
-						for (var i = 0; i < extFonts.length; i++)
-						{
-							var fontName = extFonts[i].name;
-							var fontUrl = extFonts[i].url;
-							
-							if (Graph.isCssFontUrl(fontUrl))
-							{
-						   		doc.writeln('<link rel="stylesheet" href="' +
-						   			mxUtils.htmlEntities(fontUrl) +
-						   			'" charset="UTF-8" type="text/css">');
-							}
-							else
-							{
-						   		doc.writeln('<style type="text/css">');
-						   		doc.writeln('@font-face {\n' +
-						   			'font-family: "' + mxUtils.htmlEntities(fontName) + '";\n' + 
-						   			'src: url("' + mxUtils.htmlEntities(fontUrl) + '");\n}');
-						   		doc.writeln('</style>');
-							}
-						}
-					};
-
-					// Adapts background images
-					if (Editor.enableCssDarkMode)
-					{
-						var printGetBackgroundImage = pv.getBackgroundImage;
-						
-						pv.getBackgroundImage = function()
-						{
-							return graph.adaptBackgroundPage(
-								printGetBackgroundImage.apply(
-									this, arguments));
-						};
-					}
-					
-					if (typeof(MathJax) !== 'undefined')
-					{
-						// Adds class to ignore if math is disabled
-						var printPreviewRenderPage = pv.renderPage;
-						
-						pv.renderPage = function(w, h, dx, dy, content, pageNumber)
-						{
-							var prev = mxClient.NO_FO;
-							var result = printPreviewRenderPage.apply(this, arguments);
-							mxClient.NO_FO = prev;
-							
-							if (this.graph.mathEnabled)
-							{
-								this.mathEnabled = this.mathEnabled || true;
-							}
-							else
-							{
-								result.className = 'geDisableMathJax';
-							}
-							
-							return result;
-						};
-					}
-					
-					// Switches stylesheet for print output in dark mode
-					var temp = null;
-					var tempFg = graph.shapeForegroundColor;
-					var tempBg = graph.shapeBackgroundColor;
-					
-					// Disables dashed printing of flowAnimation
-					var enableFlowAnimation = graph.enableFlowAnimation;
-					graph.enableFlowAnimation = false;
-
-					if (graph.themes != null && graph.defaultThemeName == 'darkTheme')
-					{
-						temp = graph.stylesheet;
-						graph.stylesheet = graph.getDefaultStylesheet()
-						graph.shapeForegroundColor = '#000000';
-						graph.shapeBackgroundColor = '#ffffff';
-						graph.refresh();
-					}
-					
-					// Generates the print output
-					pv.open(null, null, forcePageBreaks, true, anchorId);
-					
-					// Restores flowAnimation
-					graph.enableFlowAnimation = enableFlowAnimation;
-					
-					// Restores the stylesheet
-					if (temp != null)
-					{
-						graph.shapeForegroundColor = tempFg;
-						graph.shapeBackgroundColor = tempBg;
-						graph.stylesheet = temp;
-						graph.refresh();
-					}
-				}
-				else
-				{				
-					var bg = thisGraph.background;
-					
-					if (bg == null || bg == '' || bg == mxConstants.NONE)
-					{
-						bg = '#ffffff';
-					}
-					
-					pv.backgroundColor = bg;
-					pv.autoOrigin = autoOrigin;
-					pv.appendGraph(thisGraph, scale, x0, y0, forcePageBreaks, true, anchorId);
-					
-					var extFonts = thisGraph.getCustomFonts();
-					
-					if (pv.wnd != null)
-					{
-						for (var i = 0; i < extFonts.length; i++)
-						{
-							var fontName = extFonts[i].name;
-							var fontUrl = extFonts[i].url;
-							
-							if (Graph.isCssFontUrl(fontUrl))
-							{
-						   		pv.wnd.document.writeln('<link rel="stylesheet" href="' +
-						   			mxUtils.htmlEntities(fontUrl) +
-						   			'" charset="UTF-8" type="text/css">');
-							}
-							else
-							{
-						   		pv.wnd.document.writeln('<style type="text/css">');
-						   		pv.wnd.document.writeln('@font-face {\n' +
-						   			'font-family: "' + mxUtils.htmlEntities(fontName) + '";\n' + 
-						   			'src: url("' + mxUtils.htmlEntities(fontUrl) + '");\n}');
-						   		pv.wnd.document.writeln('</style>');
-							}
-						}
-					}
-				}
-				
-				// Restores state if css transforms are used
-				if (prev)
-				{
-					thisGraph.useCssTransforms = prev;
-					thisGraph.currentTranslate = prevTranslate;
-					thisGraph.currentScale = prevScale;
-					thisGraph.view.translate = prevViewTranslate;
-					thisGraph.view.scale = prevViewScale;
-				}
-				
-				return pv;
-			};
-			
-			var pagesFrom = pagesFromInput.value;
-			var pagesTo = pagesToInput.value;
-			var ignorePages = !allPagesRadio.checked;
-			var pv = null;
-
-			if (EditorUi.isElectronApp)
-			{
-				PrintDialog.electronPrint(editorUi, allPagesRadio.checked, pagesFrom, pagesTo,  fitRadio.checked,
-					sheetsAcrossInput.value, sheetsDownInput.value, parseInt(zoomInput.value) / 100,
-					parseInt(pageScaleInput.value) / 100, accessor.get());
-				
-				return;
-			}
-			
-			if (ignorePages)
-			{
-				ignorePages = selectionOnlyRadio.checked ||
-					(pagesFrom == currentPage &&
-					pagesTo == currentPage);
-			}
-			
-			if (!ignorePages && editorUi.pages != null && editorUi.pages.length)
-			{
-				var i0 = 0;
-				var imax = editorUi.pages.length - 1;
-				
-				if (!allPagesRadio.checked)
-				{
-					i0 = parseInt(pagesFrom) - 1;
-					imax = parseInt(pagesTo) - 1;
-				}
-				
-				for (var i = i0; i <= imax; i++)
-				{
-					var page = editorUi.pages[i];
-					var tempGraph = (page == editorUi.currentPage) ? graph : null;
-
-					if (tempGraph == null)
-					{
-						tempGraph = editorUi.createTemporaryGraph(graph.stylesheet);
-						tempGraph.shapeForegroundColor = graph.shapeForegroundColor;
-						tempGraph.shapeBackgroundColor = graph.shapeBackgroundColor;
-
-						// Restores graph settings that are relevant for printing
-						var pageVisible = true;
-						var mathEnabled = false;
-						var bg = null;
-						var bgImage = null;
-						
-						if (page.viewState == null)
-						{
-							// Workaround to extract view state from XML node
-							// This changes the state of the page and parses
-							// the XML for the graph model even if not needed.
-							if (page.root == null)
-							{
-								editorUi.updatePageRoot(page);
-							}
-						}
-						
-						if (page.viewState != null)
-						{
-							pageVisible = page.viewState.pageVisible;
-							mathEnabled = page.viewState.mathEnabled;
-							bg = page.viewState.background;
-							bgImage = page.viewState.backgroundImage;
-							tempGraph.extFonts = page.viewState.extFonts;
-						}
-
-						// Forces update of background page image in offscreen page
-						if (bgImage != null && bgImage.originalSrc != null)
-						{
-							bgImage = editorUi.createImageForPageLink(
-								bgImage.originalSrc, page);
-						}
-						
-						tempGraph.background = bg;
-						tempGraph.backgroundImage = (bgImage != null) ? new mxImage(
-							bgImage.src, bgImage.width, bgImage.height,
-							bgImage.x, bgImage.y) : null;
-						tempGraph.pageVisible = pageVisible;
-						tempGraph.mathEnabled = mathEnabled;
-
-						// Overrides graph bounds to include background images
-						var graphGetGraphBounds = tempGraph.getGraphBounds;
-
-						tempGraph.getGraphBounds = function()
-						{
-							var bounds = graphGetGraphBounds.apply(this, arguments);
-							var img = this.backgroundImage;
-							
-							if (img != null && img.width != null && img.height != null)
-							{
-								var t = this.view.translate;
-								var s = this.view.scale;
-
-								bounds = mxRectangle.fromRectangle(bounds);
-								bounds.add(new mxRectangle(
-									(t.x + img.x) * s, (t.y + img.y) * s,
-									img.width * s, img.height * s));
-							}
-
-							return bounds;
-						};
-
-						// Redirects placeholders to current page
-						var graphGetGlobalVariable = tempGraph.getGlobalVariable;
-		
-						tempGraph.getGlobalVariable = function(name)
-						{
-							if (name == 'page')
-							{
-								return page.getName();
-							}
-							else if (name == 'pagenumber')
-							{
-								return i + 1;
-							}
-							else if (name == 'pagecount')
-							{
-								return (editorUi.pages != null) ? editorUi.pages.length : 1;
-							}
-							
-							return graphGetGlobalVariable.apply(this, arguments);
-						};
-						
-						document.body.appendChild(tempGraph.container);
-						editorUi.updatePageRoot(page);
-						tempGraph.model.setRoot(page.root);
-					}
-					
-					pv = printGraph(tempGraph, pv, i != imax, page.getId());
-
-					if (tempGraph != graph)
-					{
-						tempGraph.container.parentNode.removeChild(tempGraph.container);
-					}
-				}
+				editorUi.lastPrintPagesFromInput = pagesFromInput.value;
+				editorUi.lastPrintPagesToInput = pagesToInput.value;
 			}
 			else
 			{
-				pv = printGraph(graph);
+				editorUi.lastPrintPagesFromInput = null;
+				editorUi.lastPrintPagesToInput = null;
 			}
-			
-			if (pv == null || pv.wnd == null)
-			{
-				editorUi.handleError({message: mxResources.get('errorUpdatingPreview')});
-			}
-			else
-			{
-				if (pv.mathEnabled)
-				{
-					var doc = pv.wnd.document;
-					
-					// Adds asynchronous printing when MathJax finishes rendering
-					// via global variable that is checked in math-print.js to
-					// avoid generating unsafe-inline script or adding SHA to CSP
-					if (print)
-					{
-						pv.wnd.IMMEDIATE_PRINT = true;
-					}
 
-					doc.writeln('<script type="text/javascript" src="js/math-print.js"></script>');
-				}
-				
-				pv.closeDocument();
+			zoomInput.value = Math.max(1, Math.min(1600, parseInt(zoomInput.value))) + '%';
+			editorUi.lastPrintZoom = zoomInput.value;
+			editorUi.lastPrintBorder = borderInput.value;
+			editorUi.lastPrintGrid = gridInput.checked;
+			editorUi.lastPrintTransparent = transparentInput.checked;
+			editorUi.lastPrintInclude = includeInput.checked;
+			editorUi.lastPrintSheetsAcross = sheetsAcrossInput.value;
+			editorUi.lastPrintSheetsDown = sheetsDownInput.value;
 
-				// Rewrites page links to point to internal anchors
-				Graph.rewritePageLinks(pv.wnd.document);
-				
-				if (!pv.mathEnabled && print)
-				{
-					PrintDialog.printPreview(pv);
-				}
-			}
-			
-			// Restores dark mode
-			if (darkStylesheet != null)
-			{
-				graph.shapeForegroundColor = darkFg;
-				graph.shapeBackgroundColor = darkBg;
-				graph.stylesheet = darkStylesheet;
-				graph.refresh();
-			}
+			var args = {};
+			args.border = parseInt(borderInput.value);
+			args.scale = parseInt(zoomInput.value) / 100;
+			args.grid = gridInput.checked;
+			args.transparent = transparentInput.checked;
+			args.includeCopy = includeInput.checked;
+			args.sheetsAcross = parseInt(sheetsAcrossInput.value);
+			args.sheetsDown = parseInt(sheetsDownInput.value);
+			args.pagesFrom = parseInt(pagesFromInput.value);
+			args.pagesTo = parseInt(pagesToInput.value);
+			args.allPages = allPagesRadio.checked;
+			args.selection = selectionOnlyRadio.checked;
+			args.pageView = pageViewRadio.checked;
+			args.crop = cropRadio.checked;
+			args.fit = fitRadio.checked;
+
+			return (fn != null) ? fn(!print, args) : editorUi.print(!print, args);
 		};
+
+		if (!editorUi.isOffline() && fn == null)
+		{
+			buttons.appendChild(editorUi.createHelpIcon('https://www.drawio.com/doc/faq/print-diagram'));
+		}
 		
 		var cancelBtn = mxUtils.button(mxResources.get('cancel'), function()
 		{
 			editorUi.hideDialog();
 		});
+		
 		cancelBtn.className = 'geBtn';
 		
 		if (editorUi.editor.cancelFirst)
@@ -8849,33 +9029,39 @@
 			buttons.appendChild(cancelBtn);
 		}
 		
-		if (!editorUi.isOffline())
-		{
-			var helpBtn = mxUtils.button(mxResources.get('help'), function()
-			{
-				graph.openLink('https://www.drawio.com/doc/faq/print-diagram');
-			});
-			
-			helpBtn.className = 'geBtn';
-			buttons.appendChild(helpBtn);
-		}
-		
-		if (PrintDialog.previewEnabled)
+		if (PrintDialog.previewEnabled && fn == null)
 		{
 			var previewBtn = mxUtils.button(mxResources.get('preview'), function()
 			{
-				editorUi.hideDialog();
-				preview(false);
+				try
+				{
+					editorUi.hideDialog();
+					preview(false);
+				}
+				catch (e)
+				{
+					editorUi.handleError(e);
+				}
 			});
+
 			previewBtn.className = 'geBtn';
 			buttons.appendChild(previewBtn);
 		}
-		
-		var printBtn = mxUtils.button(mxResources.get((!PrintDialog.previewEnabled) ? 'ok' : 'print'), function()
+
+		var printBtn = mxUtils.button(mxResources.get((fn != null) ? 'export' :
+			(!PrintDialog.previewEnabled) ? 'ok' : 'print'), function()
 		{
-			editorUi.hideDialog();
-			preview(true);
+			try
+			{
+				editorUi.hideDialog();
+				preview(true);
+			}
+			catch (e)
+			{
+				editorUi.handleError(e);
+			}
 		});
+
 		printBtn.className = 'geBtn gePrimaryBtn';
 		buttons.appendChild(printBtn);
 		
