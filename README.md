@@ -7,11 +7,11 @@ As well as running this project, we run a production-grade deployment of the dia
 License
 -----------------
 
-The source code authored by us in this repo is licensed under the Apache v2. The full core is open source, but the are some boundary functions that are difficult to publish in a way we can maintain them.
+The source code authored by us in this repo is licensed under the Apache v2. The full core is open source, but there are some boundary functions that are difficult to publish in a way we can maintain them.
 
 The JGraph provided icons and diagram templates are licensed under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Additional terms may also apply where the icons are originally defined by a third-party copyright holder. We have checked in all cases that the original license allows use in this project. Also see the terms for using the draw.io logo below.
 
-Additional minified JavaScript files and Java libraries are used in this project. All of the licenses are deemed compatible with the Apache 2.0, nothing is GPL or AGPL, due dilgence is performed on all third-party code.
+Additional minified JavaScript files and Java libraries are used in this project. All of the licenses are deemed compatible with the Apache 2.0, nothing is GPL or AGPL, due diligence is performed on all third-party code.
 
 We make no copyright claim on the content you create with this software, regardless of the copyright of individual icons used in such content.
 
@@ -38,7 +38,7 @@ The full packaged .war of the client and servlets is built when the project is t
 Supported Browsers
 ------------------
 
-draw.io supports Chrome 70+, Firefox 70+, Safari 11+, Opera 50+, Native Android browser 7x+, the default browser in the current and previous major iOS versions (e.g. 11.2.x and 10.3.x) and Edge 79+.
+draw.io supports Chrome 98+, Firefox 94+, Safari 15.4+, Opera 84+, WebView Android 98+, Safari iOS 15.4+ and Edge 98+.
 
 This project is not open-contribution
 ------------------------------------------------------

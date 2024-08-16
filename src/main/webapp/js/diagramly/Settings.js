@@ -57,7 +57,7 @@ var mxSettings =
 		{
 			mxSettings.settings.ui = ui;
 
-			if (ui == 'kennedy' || ui == '')
+			if (!Editor.enableCssDarkMode && (ui == 'kennedy' || ui == ''))
 			{
 				mxSettings.settings.darkMode = false;
 			}
@@ -69,7 +69,7 @@ var mxSettings =
 			var value = mxSettings.getMainSettings();
 			value.ui = ui;
 
-			if (ui == 'kennedy')
+			if (!Editor.enableCssDarkMode && ui == 'kennedy')
 			{
 				value.darkMode = false;
 			}
@@ -301,9 +301,19 @@ var mxSettings =
 	},
 	load: function()
 	{
-		if (isLocalStorage && typeof(JSON) !== 'undefined')
+		try
 		{
-			mxSettings.parse(localStorage.getItem(mxSettings.key));
+			if (isLocalStorage && typeof(JSON) !== 'undefined')
+			{
+				mxSettings.parse(localStorage.getItem(mxSettings.key));
+			}
+		}
+		catch (e)
+		{
+			if (window.console != null)
+			{
+				console.log('Error loading settings:', mxSettings.key, e);
+			}
 		}
 
 		if (mxSettings.settings == null)

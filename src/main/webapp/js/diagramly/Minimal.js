@@ -1,4 +1,9 @@
 /**
+ * Installing theme.
+ */
+Editor.themes.push('min');
+
+/**
  * Testing dockable windows.
  */
 EditorUi.windowed = urlParams['windows'] != '0';
@@ -107,6 +112,7 @@ EditorUi.initMinimalTheme = function()
 				menu.funct.apply(this, arguments);
 			}));
 			
+			elt.setAttribute('title', label);
 			elt.style.cssText = css;
 			elt.className = 'geTitle';
 			container.appendChild(elt);
@@ -138,11 +144,13 @@ EditorUi.initMinimalTheme = function()
 			else
 			{
 				var elt = addMenu('newLibrary', mxResources.get('newLibrary'));
+				elt.style.display = 'block';
 				elt.style.fontSize = '11px';
 				elt.style.left = '0';
 				
 				var elt = addMenu('openLibraryFrom', mxResources.get('openLibraryFrom'));
 				elt.style.borderLeftStyle = 'solid';
+				elt.style.display = 'block';
 				elt.style.fontSize = '11px';
 				elt.style.left = '50%';
 			}
@@ -561,11 +569,14 @@ EditorUi.initMinimalTheme = function()
 		function addMenu(id, small, img)
 		{
 			var menu = ui.menus.get(id);
-
+			
 			var elt = menuObj.addMenu(mxResources.get(id), mxUtils.bind(this, function()
 			{
 				// Allows extensions of menu.functid
-				menu.funct.apply(this, arguments);
+				if (!elt.classList.contains('mxDisabled'))
+				{
+					menu.funct.apply(this, arguments);
+				}
 			}), before);
             
 			elt.className = 'geMenuItem';
@@ -994,6 +1005,11 @@ EditorUi.initMinimalTheme = function()
 				null, mxResources.get('delete'), ui.actions.get('delete'),
 				(small) ? Editor.trashImage : null)], (small) ? 60 : null);
 
+			if (!graph.isEnabled())
+			{
+				elt.classList.add('mxDisabled');
+			}
+
 			if (iw >= 411)
 			{
 				createGroup([undoElt, redoElt], 60);
@@ -1010,6 +1026,8 @@ EditorUi.initMinimalTheme = function()
         };
         
         refreshMenu();
+
+		ui.addListener('lockedChanged', refreshMenu);
         
         mxEvent.addListener(window, 'resize', function()
 		{
@@ -1033,6 +1051,11 @@ EditorUi.initMinimalTheme = function()
             if (ui.actions.layersWindow != null)
             {
             	ui.actions.layersWindow.window.fit();
+            }
+
+            if (ui.menus.chatWindow != null)
+            {
+            	ui.menus.chatWindow.window.fit();
             }
 
             if (ui.menus.tagsWindow != null)

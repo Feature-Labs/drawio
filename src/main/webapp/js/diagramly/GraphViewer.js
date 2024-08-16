@@ -1197,6 +1197,8 @@ GraphViewer.prototype.addToolbar = function()
 
 	// Creates toolbar for viewer
 	var toolbar = container.ownerDocument.createElement('div');
+	toolbar.style.display = 'flex';
+	toolbar.style.alignItems = 'center';
 	toolbar.style.position = 'absolute';
 	toolbar.style.overflow = 'hidden';
 	toolbar.style.boxSizing = 'border-box';
@@ -1361,6 +1363,7 @@ GraphViewer.prototype.addToolbar = function()
 		return a;
 	});
 
+	var model = this.graph.getModel();
 	var layersDialog = null;
 	var tagsComponent = null;
 	var tagsDialog = null;
@@ -1373,8 +1376,8 @@ GraphViewer.prototype.addToolbar = function()
 		if (token == 'pages')
 		{
 			pageInfo = container.ownerDocument.createElement('div');
-			pageInfo.style.cssText = 'display:inline-block;position:relative;top:5px;padding:0 4px 0 4px;' +
-				'vertical-align:top;font-family:Helvetica,Arial;font-size:12px;;cursor:default;color:#000;'
+			pageInfo.style.cssText = 'display:inline-flex;position:relative;align-items:center;' +
+				'padding:4px;font-family:Helvetica,Arial;font-size:12px;;cursor:default;color:#000;'
 			mxUtils.setOpacity(pageInfo, 70);
 			
 			var prevButton = addButton(mxUtils.bind(this, function()
@@ -1395,13 +1398,11 @@ GraphViewer.prototype.addToolbar = function()
 			nextButton.style.paddingLeft = '0px';
 			nextButton.style.paddingRight = '0px';
 			
-			var lastXmlNode = null;
-			
 			var update = mxUtils.bind(this, function()
 			{
 				pageInfo.innerText = '';
 				mxUtils.write(pageInfo, (this.currentPage + 1) + ' / ' + this.diagrams.length);
-				pageInfo.style.display = (this.diagrams.length > 1) ? 'inline-block' : 'none';
+				pageInfo.style.display = (this.diagrams.length > 1) ? 'inline-flex' : 'none';
 				prevButton.style.display = pageInfo.style.display;
 				nextButton.style.display = pageInfo.style.display;
 			});
@@ -1436,8 +1437,6 @@ GraphViewer.prototype.addToolbar = function()
 		{
 			if (this.layersEnabled)
 			{
-				var model = this.graph.getModel();
-
 				var layersButton = addButton(mxUtils.bind(this, function(evt)
 				{
 					if (layersDialog != null)
@@ -1502,7 +1501,7 @@ GraphViewer.prototype.addToolbar = function()
 						layersDialog.style.maxHeight = (this.graph.container.clientHeight - this.toolbarHeight - 10) + 'px'
 						layersDialog.style.zIndex = this.toolbarZIndex + 1;
 						layersDialog.style.color = '#000';
-						mxUtils.setOpacity(layersDialog, 80);
+						mxUtils.setOpacity(layersDialog, 85);
 						var origin = mxUtils.getDocumentScrollOrigin(document);
 						layersDialog.style.left = origin.x + r.left - 1 + 'px';
 						layersDialog.style.top = origin.y + r.bottom - 2 + 'px';
@@ -1518,10 +1517,10 @@ GraphViewer.prototype.addToolbar = function()
 				
 				model.addListener(mxEvent.CHANGE, function()
 				{
-					layersButton.style.display = (model.getChildCount(model.root) > 1) ? 'inline-block' : 'none';
+					layersButton.style.display = (model.getChildCount(model.root) > 1) ? 'inline-flex' : 'none';
 				});
 				
-				layersButton.style.display = (model.getChildCount(model.root) > 1) ? 'inline-block' : 'none';
+				layersButton.style.display = (model.getChildCount(model.root) > 1) ? 'inline-flex' : 'none';
 			}
 		}
 		else if (token == 'tags')
@@ -1556,7 +1555,7 @@ GraphViewer.prototype.addToolbar = function()
 							tagsComponent.div.style.filter = 'invert(93%) hue-rotate(180deg)';
 						}
 
-						mxUtils.setOpacity(tagsComponent.div, 80);
+						mxUtils.setOpacity(tagsComponent.div, 85);
 					}
 
 					if (tagsDialog != null)
@@ -1567,6 +1566,7 @@ GraphViewer.prototype.addToolbar = function()
 					else
 					{
 						tagsDialog = tagsComponent.div;
+						tagsDialog.style.position = 'absolute';
 						
 						mxEvent.addListener(tagsDialog, 'mouseleave', function()
 						{
@@ -1588,10 +1588,16 @@ GraphViewer.prototype.addToolbar = function()
 
 				model.addListener(mxEvent.CHANGE, mxUtils.bind(this, function()
 				{
-					tagsButton.style.display = (this.graph.getAllTags().length > 0) ? 'inline-block' : 'none';
+					tagsButton.style.display = (this.graph.getAllTags().length > 0) ? 'inline-flex' : 'none';
+
+					if (tagsDialog != null && this.graph.getAllTags().length == 0)
+					{
+						tagsDialog.parentNode.removeChild(tagsDialog);
+						tagsDialog = null;
+					}
 				}));
 				
-				tagsButton.style.display = (this.graph.getAllTags().length > 0) ? 'inline-block' : 'none';
+				tagsButton.style.display = (this.graph.getAllTags().length > 0) ? 'inline-flex' : 'none';
 			}
 		}
 		else if (token == 'lightbox')
@@ -1631,8 +1637,8 @@ GraphViewer.prototype.addToolbar = function()
 	if (this.graphConfig.title != null)
 	{
 		var filename = container.ownerDocument.createElement('div');
-		filename.style.cssText = 'display:inline-block;position:relative;padding:3px 6px 0 6px;' +
-			'vertical-align:top;font-family:Helvetica,Arial;font-size:12px;top:4px;cursor:default;color:#000;';
+		filename.style.cssText = 'display:inline-flex;position:relative;align-items:center;' +
+			'padding:6px;font-family:Helvetica,Arial;font-size:12px;cursor:default;color:#000;';
 		filename.setAttribute('title', this.graphConfig.titleTooltip || this.graphConfig.title);
 		mxUtils.write(filename, this.graphConfig.title);
 		mxUtils.setOpacity(filename, 70);
@@ -1656,9 +1662,11 @@ GraphViewer.prototype.addToolbar = function()
 	
 			// Workaround for position:relative set in ResizeSensor
 			var origin = mxUtils.getScrollOrigin(document.body)
-			var b = (document.body.style.position === 'relative') ? document.body.getBoundingClientRect() :
+			var b = (document.body.style.position === 'relative') ?
+				document.body.getBoundingClientRect() :
 				{left: -origin.x, top: -origin.y};
-			r = {left: r.left - b.left, top: r.top - b.top, bottom: r.bottom - b.top, right: r.right - b.left};
+			r = {left: r.left - b.left, top: r.top - b.top,
+				bottom: r.bottom - b.top, right: r.right - b.left};
 			
 			toolbar.style.left = r.left + 'px';
 
@@ -1693,6 +1701,12 @@ GraphViewer.prototype.addToolbar = function()
 					toolbar.parentNode.removeChild(toolbar);
 				}
 				
+				if (tagsDialog != null)
+				{
+					tagsDialog.parentNode.removeChild(tagsDialog);
+					tagsDialog = null;
+				}
+
 				if (layersDialog != null)
 				{
 					layersDialog.parentNode.removeChild(layersDialog);
@@ -1708,7 +1722,10 @@ GraphViewer.prototype.addToolbar = function()
 				
 				while (source != null)
 				{
-					if (source == container || source == toolbar || source == layersDialog)
+					if (source == container ||
+						source == toolbar ||
+						source == layersDialog ||
+						source == tagsDialog)
 					{
 						return;
 					}
@@ -1761,7 +1778,9 @@ GraphViewer.prototype.createToolbarButton = function(fn, imgSrc, tip, enabled)
 {
 	var a = document.createElement('div');
 	a.style.borderRight = '1px solid #d0d0d0';
-	a.style.padding = '3px 6px 3px 6px';
+	a.style.display = 'inline-flex';
+	a.style.alignItems = 'center';
+	a.style.padding = '6px';
 	
 	mxEvent.addListener(a, 'click', fn);
 
@@ -1770,7 +1789,6 @@ GraphViewer.prototype.createToolbarButton = function(fn, imgSrc, tip, enabled)
 		a.setAttribute('title', tip);
 	}
 	
-	a.style.display = 'inline-block';
 	var img = document.createElement('img');
 	img.setAttribute('border', '0');
 	img.setAttribute('src', imgSrc);
@@ -1802,7 +1820,7 @@ GraphViewer.prototype.createToolbarButton = function(fn, imgSrc, tip, enabled)
 	return a;
 };
 
-GraphViewer.prototype.disableButton = function(token)
+GraphViewer.prototype.disableButton = function(token, tooltip)
 {
 	var def = this.graphConfig['toolbar-buttons']? this.graphConfig['toolbar-buttons'][token] : null;
 			
@@ -1815,6 +1833,11 @@ GraphViewer.prototype.disableButton = function(token)
 		{
 			def.elem.style.backgroundColor = '#eee';
 		});
+
+		if (tooltip)
+		{
+			def.elem.setAttribute('title', tooltip);
+		}
 	}
 };
 
@@ -2336,10 +2359,8 @@ GraphViewer.createViewerForElement = function(element, callback)
 	}
 };
 
-GraphViewer.logAncestorFrames = function()
+GraphViewer.blockedAncestorFrames = function()
 {
-	return;
-
 	try
 	{
 		if (window.location.ancestorOrigins && window.location.hostname &&
@@ -2357,26 +2378,34 @@ GraphViewer.logAncestorFrames = function()
 			for (var i = 0; i < window.location.ancestorOrigins.length; i++)
 			{
 				message += ' -> ' + window.location.ancestorOrigins[i];
+
+				// Running commercial, competing services using our infrastructure isn't allowed.
+				if (message.endsWith('.appsplus.co') || message.endsWith('confluence-cloud-excalidraw-ll3likebca-uc.a.run.app'))
+				{
+					return true;
+				}
 			}
 
-			if (hostname.endsWith('.draw.io') && window.location.ancestorOrigins.length == 1 &&
+			if ((hostname.endsWith('ac.draw.io') || hostname.endsWith('aj.draw.io')) && window.location.ancestorOrigins.length == 1 &&
 					window.location.ancestorOrigins[0] && window.location.ancestorOrigins[0].endsWith('.atlassian.net'))
 			{
 				// do not log *.draw.io domains embedded directly into atlassian.net
 			}
-			else if (window.location.ancestorOrigins.length > 0)
-			{
-				var img = new Image();
-				img.src = 'https://log.diagrams.net/images/1x1.png?src=ViewerAncestorFrames' +
-					((typeof window.EditorUi !== 'undefined') ? '&v=' + encodeURIComponent(EditorUi.VERSION) : '') +
-					'&data=' + encodeURIComponent(message);
-			}
+			// else if (window.location.ancestorOrigins.length > 0)
+			// {
+			// 	var img = new Image();
+			// 	img.src = 'https://log.diagrams.net/images/1x1.png?src=ViewerAncestorFrames' +
+			// 		((typeof window.EditorUi !== 'undefined') ? '&v=' + encodeURIComponent(EditorUi.VERSION) : '') +
+			// 		'&data=' + encodeURIComponent(message);
+			// }
 		}
 	}
 	catch (e)
 	{
 		// ignore
 	}
+
+	return false;
 };
 
 /**
@@ -2458,10 +2487,11 @@ GraphViewer.initCss = function()
 			// These are required for the print dialog
 			'.geDialog {	position:absolute;	background:white;	overflow:hidden;	padding:30px;	border:1px solid #acacac;	-webkit-box-shadow:0px 0px 2px 2px #d5d5d5;	-moz-box-shadow:0px 0px 2px 2px #d5d5d5;	box-shadow:0px 0px 2px 2px #d5d5d5;	_filter:progid:DXImageTransform.Microsoft.DropShadow(OffX=2, OffY=2, Color=\'#d5d5d5\', Positive=\'true\');	z-index: 2;}.geDialogClose {	position:absolute;	width:9px;	height:9px;	opacity:0.5;	cursor:pointer;	_filter:alpha(opacity=50);}.geDialogClose:hover {	opacity:1;}.geDialogTitle {	box-sizing:border-box;	white-space:nowrap;	background:rgb(229, 229, 229);	border-bottom:1px solid rgb(192, 192, 192);	font-size:15px;	font-weight:bold;	text-align:center;	color:rgb(35, 86, 149);}.geDialogFooter {	background:whiteSmoke;	white-space:nowrap;	text-align:right;	box-sizing:border-box;	border-top:1px solid #e5e5e5;	color:darkGray;}',
 			'.geBtn {	background-color: #f5f5f5;	border-radius: 2px;	border: 1px solid #d8d8d8;	color: #333;	cursor: default;	font-size: 11px;	font-weight: bold;	height: 29px;	line-height: 27px;	margin: 0 0 0 8px;	min-width: 72px;	outline: 0;	padding: 0 8px;	cursor: pointer;}.geBtn:hover, .geBtn:focus {	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);	border: 1px solid #c6c6c6;	background-color: #f8f8f8;	background-image: linear-gradient(#f8f8f8 0px,#f1f1f1 100%);	color: #111;}.geBtn:disabled {	opacity: .5;}.gePrimaryBtn {	background-color: #4d90fe;	background-image: linear-gradient(#4d90fe 0px,#4787ed 100%);	border: 1px solid #3079ed;	color: #fff;}.gePrimaryBtn:hover, .gePrimaryBtn:focus {	background-color: #357ae8;	background-image: linear-gradient(#4d90fe 0px,#357ae8 100%);	border: 1px solid #2f5bb7;	color: #fff;}.gePrimaryBtn:disabled {	opacity: .5;}'].join('\n');
-		document.getElementsByTagName('head')[0].appendChild(style);
 
-		// Log the ansestor frames
-		GraphViewer.logAncestorFrames();
+		if (!GraphViewer.blockedAncestorFrames())
+		{
+			document.getElementsByTagName('head')[0].appendChild(style);
+		}
 	}
 	catch (e)
 	{
