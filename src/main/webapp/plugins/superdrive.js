@@ -24,7 +24,7 @@ Draw.loadPlugin(function(ui)
 {
     var loadDescriptor = null;
     var ncUser = null;
-    
+
     mxEvent.addListener(window, 'message', mxUtils.bind(this, function(evt)
     {
         var data = evt.data;
@@ -32,7 +32,7 @@ Draw.loadPlugin(function(ui)
         try
         {
             data = JSON.parse(data);
-            
+
             if (data.action == 'load')
             {
                 if (data.desc != null)
@@ -66,22 +66,22 @@ Draw.loadPlugin(function(ui)
 			{
 				//ignore such that next call we retry
 			});
-			
+
 			//Return a dummy user until we have the actual user in order for UI to be populated
 			return new DrawioUser(Date.now(), null, 'Anonymous');
 		}
-		
+
 		return ncUser;
 	};
 
     //======================== Revisions ========================
-	
+
 	ui.isRevisionHistoryEnabled = function()
 	{
         var file = ui.getCurrentFile();
 		return file && file.desc && (!file.desc.ver || file.desc.versionsEnabled);
 	};
-	
+
 	ui.isRevisionHistorySupported = function()
 	{
 		return ui.isRevisionHistoryEnabled();
@@ -99,7 +99,7 @@ Draw.loadPlugin(function(ui)
 		{
 			ui.remoteInvoke('loadFileVersion', [id, this.revId], null, success, error);
 		};
-		
+
 		function restoreFn(xml)
 		{
 			if (ui.spinner.spin(document.body, mxResources.get('restoring')))
@@ -112,7 +112,7 @@ Draw.loadPlugin(function(ui)
                 });
 			}
 		};
-		
+
 		ui.remoteInvoke('getFileRevisions', [id], null, function(revisions)
 		{
             revisions.sort(function(a, b)
@@ -122,7 +122,7 @@ Draw.loadPlugin(function(ui)
 
 			//convert to editor format and add getXml function
 			var revs = [];
-			
+
 			for (var i = 0; i < revisions.length; i++)
 			{
 				var rev = revisions[i];
@@ -130,14 +130,14 @@ Draw.loadPlugin(function(ui)
 				rev.getXml = mxUtils.bind(rev, getXml);
 				revs.push(rev);
 			}
-			
+
 			success(revs, restoreFn);
 		}, error);
 	};
-	
+
     //============= Embed File with real-time collab support =================
     // Use optimistic sync since we cannot save file properties/metadata so far
-    
+
     /**
      * Shorter autosave delay for optimistic sync.
      */
@@ -147,9 +147,9 @@ Draw.loadPlugin(function(ui)
      * Delay for last save in ms.
      */
     EmbedFile.prototype.saveDelay = 0;
-    
+
     /**
-     * 
+     *
      */
     EmbedFile.prototype.isConflict = function(err)
     {
@@ -168,14 +168,14 @@ Draw.loadPlugin(function(ui)
     {
         return true;
     };
-    
+
     /**
-     * 
+     *
      */
     EmbedFile.prototype.save = function(revision, success, error, unloading, overwrite)
     {
         this.saveStarted = true;
-        
+
         DrawioFile.prototype.save.apply(this, [revision, mxUtils.bind(this, function()
         {
             this.saveFile(null, revision, success, error, unloading, overwrite);
@@ -184,18 +184,18 @@ Draw.loadPlugin(function(ui)
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.setModified = function(value)
     {
         DrawioFile.prototype.setModified.apply(this, arguments);
-        
-        //Set editor modified also to prevent accidental closure or exiting without saving  
+
+        //Set editor modified also to prevent accidental closure or exiting without saving
         ui.editor.modified = value;
     };
-    
+
     /**
-     * 
+     *
      */
     EmbedFile.prototype.saveFile = function(title, revision, success, error, unloading, overwrite)
     {
@@ -225,7 +225,7 @@ Draw.loadPlugin(function(ui)
                         var lastDesc = this.desc;
                         var savedData = this.getData();
                         var etag = this.getCurrentEtag();
-                        
+
                         if (this.sync != null)
                         {
                             this.sync.fileSaving();
@@ -241,11 +241,11 @@ Draw.loadPlugin(function(ui)
                                 this.savingFile = false;
                                 this.desc = Object.assign({}, this.desc); // Clone the object
                                 Object.assign(this.desc, resp); // Assign the new values
-            
+
                                 this.fileSaved(savedData, lastDesc, mxUtils.bind(this, function()
                                 {
                                     this.contentChanged();
-                                    
+
                                     if (success != null)
                                     {
                                         success();
@@ -255,7 +255,7 @@ Draw.loadPlugin(function(ui)
                             catch (e)
                             {
                                 this.savingFile = false;
-                                
+
                                 if (error != null)
                                 {
                                     error(e);
@@ -271,15 +271,15 @@ Draw.loadPlugin(function(ui)
                             try
                             {
                                 this.savingFile = false;
-                            
+
                                 if (this.isConflict(err))
                                 {
                                     this.inConflictState = true;
-                                    
+
                                     if (this.sync != null)
                                     {
                                         this.savingFile = true;
-                                        
+
                                         this.sync.fileConflict(null, mxUtils.bind(this, function()
                                         {
                                             // Adds random cool-off
@@ -295,7 +295,7 @@ Draw.loadPlugin(function(ui)
                                         }), mxUtils.bind(this, function()
                                         {
                                             this.savingFile = false;
-                                            
+
                                             if (error != null)
                                             {
                                                 error();
@@ -315,7 +315,7 @@ Draw.loadPlugin(function(ui)
                             catch (e)
                             {
                                 this.savingFile = false;
-                                
+
                                 if (error != null)
                                 {
                                     error(e);
@@ -330,7 +330,7 @@ Draw.loadPlugin(function(ui)
                     catch (e)
                     {
                         this.savingFile = false;
-                        
+
                         if (error != null)
                         {
                             error(e);
@@ -341,7 +341,7 @@ Draw.loadPlugin(function(ui)
                         }
                     }
                 });
-                
+
                 doSave();
             }
         }
@@ -359,7 +359,7 @@ Draw.loadPlugin(function(ui)
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.getTitle = function()
     {
@@ -367,7 +367,7 @@ Draw.loadPlugin(function(ui)
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.getHash = function()
     {
@@ -383,7 +383,7 @@ Draw.loadPlugin(function(ui)
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.getId = function()
     {
@@ -391,7 +391,7 @@ Draw.loadPlugin(function(ui)
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.isSyncSupported = function()
 	{
@@ -399,7 +399,7 @@ Draw.loadPlugin(function(ui)
 	};
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.isRevisionHistorySupported = function()
     {
@@ -421,7 +421,7 @@ Draw.loadPlugin(function(ui)
 	};
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.getLatestVersion = function(success, error)
     {
@@ -439,7 +439,8 @@ Draw.loadPlugin(function(ui)
      */
     EmbedFile.prototype.getChannelId = function()
     {
-        return 'C-' + DrawioFile.prototype.getChannelId.apply(this, arguments);
+        //return 'C-' + DrawioFile.prototype.getChannelId.apply(this, arguments);
+        return this.desc.id;
     };
 
     EmbedFile.prototype.getHash = function()
@@ -456,12 +457,12 @@ Draw.loadPlugin(function(ui)
         {
             return CryptoJS.MD5(this.desc.instanceId + this.desc.id).toString();
         }
-        
+
         return null;
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.getLastModifiedDate = function()
     {
@@ -469,7 +470,7 @@ Draw.loadPlugin(function(ui)
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.getDescriptor = function()
     {
@@ -485,7 +486,7 @@ Draw.loadPlugin(function(ui)
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.getDescriptorEtag = function(desc)
     {
@@ -501,20 +502,20 @@ Draw.loadPlugin(function(ui)
     };
 
     /**
-     * 
+     *
      */
     EmbedFile.prototype.loadDescriptor = function(success, error)
     {
         ui.remoteInvoke('getFileInfo', this.desc.ver > 1? [this.desc.id, this.desc.shareToken] : [this.desc.path], null, success, error);
     };
-    
+
     var allowAutoSave = true;
-    
+
     EmbedFile.prototype.isAutosaveNow = function(success, error)
     {
         return allowAutoSave;
     };
-    
+
     //Ensure saving is via the file
     ui.actions.get('save').funct = function(exit)
     {
@@ -524,7 +525,7 @@ Draw.loadPlugin(function(ui)
         }
 
         var curFile = ui.getCurrentFile();
-        
+
         if (exit)
         {
             allowAutoSave = false;
@@ -537,7 +538,7 @@ Draw.loadPlugin(function(ui)
                 ui.actions.get('exit').funct();
             }
         };
-        
+
         function doSave()
         {
             if (curFile.saveStarted || curFile.savingFile)
@@ -545,7 +546,7 @@ Draw.loadPlugin(function(ui)
                 setTimeout(doSave, 100);
                 return;
             }
-            
+
             if (curFile.isModified())
             {
                 ui.saveFile(null, doActions);
@@ -555,22 +556,22 @@ Draw.loadPlugin(function(ui)
                 doActions();
             }
         };
-        
+
         doSave();
     };
 
     //Add file opening here (or it should be for all in EditorUi?)
     var origInstallMessageHandler =  ui.installMessageHandler;
-    
+
     ui.installMessageHandler = function(callback)
     {
         origInstallMessageHandler.call(this, function()
         {
             callback.apply(this, arguments);
-            
+
             var file = ui.getCurrentFile();
             loadDescriptor = loadDescriptor || {};
-            
+
             // New files call this twice, so we need to check if the file is loaded
             if (!loadDescriptor.isLoaded)
             {
@@ -581,12 +582,12 @@ Draw.loadPlugin(function(ui)
             loadDescriptor.isLoaded = true;
         });
     }
-    
+
     ui.editor.setModified = function()
     {
         //Cancel set modified of the editor and use the file's one
     };
 
-    //Prefetch current user 
+    //Prefetch current user
 	ui.getCurrentUser();
 });
